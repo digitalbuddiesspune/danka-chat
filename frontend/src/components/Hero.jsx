@@ -49,7 +49,7 @@ const Hero = () => {
   }
 
   return (
-    <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden">
+    <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[600px] overflow-hidden">
       {/* Slides */}
       <div className="relative w-full h-full">
         <AnimatePresence mode="wait">
