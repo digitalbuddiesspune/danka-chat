@@ -73,14 +73,14 @@ const AboutUs = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-orange-500 to-yellow-500 text-white py-12 sm:py-16 md:py-20 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <motion.div
+          {/* <motion.div
             initial={{ scale: 0, rotate: -180 }}
             animate={{ scale: 1, rotate: 0 }}
             transition={{ duration: 0.8, type: "spring" }}
             className="text-4xl sm:text-5xl md:text-6xl mb-3 sm:mb-4"
           >
             🌍
-          </motion.div>
+          </motion.div> */}
           <motion.h1
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}

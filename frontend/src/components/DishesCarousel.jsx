@@ -71,28 +71,30 @@ const DishesCarousel = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 600,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000, // 5 seconds
+    autoplaySpeed: 4000,
     pauseOnHover: true,
+    cssEase: "ease-out",
     responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
         },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: true,
         },
       },
     ],
@@ -100,102 +102,139 @@ const DishesCarousel = () => {
   const settingsMobile = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 600,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000, // 5 seconds
+    autoplaySpeed: 4000,
     pauseOnHover: true,
+    cssEase: "ease-out",
     responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
         },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: true,
         },
       },
     ],
   };
-
   return (
-    <section className="py-16 px-4 bg-gradient-to-b from-white to-orange-50 lg:h-screen">
-      <div className="max-w-7xl mx-auto flex flex-col justify-between my-auto ">
+    <section className="py-16 px-4 bg-gradient-to-b from-white via-orange-50/60 to-orange-100/40">
+      <div className="max-w-7xl mx-auto flex flex-col gap-10">
+        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-800">
-            Our Delicious Dishes
+          <p className="inline-flex items-center px-4 py-1 rounded-full bg-orange-100 text-orange-700 text-sm font-medium mb-3">
+            Taste the TestoBites Experience
+          </p>
+          <h2 className="text-4xl font-bold mb-4 text-gray-800">
+            Our Signature Street Food Dishes
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Explore our mouth-watering collection of authentic Indian street
-            food
+
+          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+            Handcrafted with love, hygiene and authentic Indian flavors that
+            bring the streets to your plate.
           </p>
         </motion.div>
 
+        {/* Carousel */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.7, delay: 0.15 }}
           className="dishes-carousel"
         >
-          <div className="lg:hidden">
-              <Slider {...settingsMobile}>
-            {dishes.map((dish) => (
-              <div key={dish.id} className="px-3">
-                <motion.div 
-                  whileHover={{ scale: 1.05, y: -10 }}
-                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-                >
-                  <div className="relative h-64 overflow-hidden">
-                    <img
-                      src={dish.image}
-                      alt={dish.name}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                      <h3 className="text-xl font-bold">{dish.name}</h3>
-                    </div>
-                  </div>
-                </motion.div>
-              </div>
-            ))}
-          </Slider>
-          </div>
           <div className="hidden lg:block">
             <Slider {...settings}>
-              {dishes.map((dish) => (
+              {dishes.map((dish, index) => (
                 <div key={dish.id} className="px-3">
                   <motion.div
-                    whileHover={{ scale: 1.05, y: -10 }}
-                    className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.4 }}
+                    transition={{ duration: 0.5, delay: index * 0.05 }}
+                    whileHover={{ y: -10, scale: 1.03 }}
+                    className="group bg-white/90 backdrop-blur-sm rounded-2xl shadow-md hover:shadow-2xl border border-orange-100 transition-all duration-300 overflow-hidden"
                   >
-                    <div className="relative h-64 overflow-hidden">
+                    <div className="relative aspect-[4/3] overflow-hidden">
                       <img
                         src={dish.image}
                         alt={dish.name}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                         loading="lazy"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                      <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                        <h3 className="text-xl font-bold">{dish.name}</h3>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-90" />
+                      <div className="absolute top-3 left-3">
+                        <span className="inline-flex items-center px-3 py-1 rounded-full bg-orange-500/90 text-white text-xs font-semibold shadow-sm">
+                          TestoBites Special
+                        </span>
+                      </div>
+                      <div className="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 className="text-lg md:text-xl font-bold text-white drop-shadow-sm">
+                          {dish.name}
+                        </h3>
+                        <p className="mt-1 text-xs md:text-sm text-orange-100/90">
+                          Crispy, spicy & full of flavor – a must-try from our
+                          street food menu.
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+                </div>
+              ))}
+            </Slider>
+          </div>
+            <div className="block lg:hidden">
+            <Slider {...settingsMobile}>
+              {dishes.map((dish, index) => (
+                <div key={dish.id} className="px-3">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.4 }}
+                    transition={{ duration: 0.5, delay: index * 0.05 }}
+                    whileHover={{ y: -10, scale: 1.03 }}
+                    className="group bg-white/90 backdrop-blur-sm rounded-2xl shadow-md hover:shadow-2xl border border-orange-100 transition-all duration-300 overflow-hidden"
+                  >
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      <img
+                        src={dish.image}
+                        alt={dish.name}
+                        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-90" />
+                      <div className="absolute top-3 left-3">
+                        <span className="inline-flex items-center px-3 py-1 rounded-full bg-orange-500/90 text-white text-xs font-semibold shadow-sm">
+                          TestoBites Special
+                        </span>
+                      </div>
+                      <div className="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 className="text-lg md:text-xl font-bold text-white drop-shadow-sm">
+                          {dish.name}
+                        </h3>
+                        <p className="mt-1 text-xs md:text-sm text-orange-100/90">
+                          Crispy, spicy & full of flavor – a must-try from our
+                          street food menu.
+                        </p>
                       </div>
                     </div>
                   </motion.div>
@@ -208,36 +247,39 @@ const DishesCarousel = () => {
         {/* Custom CSS for slick carousel */}
         <style>{`
           .dishes-carousel .slick-dots {
-            bottom: -50px;
+            bottom: -35px;
           }
           .dishes-carousel .slick-dots li button:before {
-            color: #f97316;
-            font-size: 12px;
+            color: #fb923c;
+            font-size: 10px;
+            opacity: 0.5;
           }
           .dishes-carousel .slick-dots li.slick-active button:before {
             color: #f97316;
+            opacity: 1;
           }
           .dishes-carousel .slick-prev,
           .dishes-carousel .slick-next {
-            z-index: 1;
+            z-index: 10;
           }
           .dishes-carousel .slick-prev {
-            left: -40px;
+            left: -24px;
           }
           .dishes-carousel .slick-next {
-            right: -40px;
+            right: -24px;
           }
           .dishes-carousel .slick-prev:before,
           .dishes-carousel .slick-next:before {
             color: #f97316;
-            font-size: 30px;
+            font-size: 26px;
           }
+
           @media (max-width: 768px) {
             .dishes-carousel .slick-prev {
-              left: -20px;
+              left: -12px;
             }
             .dishes-carousel .slick-next {
-              right: -20px;
+              right: -12px;
             }
           }
         `}</style>

@@ -356,7 +356,7 @@ const ContactUs = () => {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white bg-opacity-20 hover:bg-opacity-30 backdrop-blur-sm rounded-full p-4 transition-all duration-300 transform hover:scale-110"
+                className="bg-[#2b2b2b] bg-opacity-20 hover:bg-opacity-30 backdrop-blur-sm rounded-full p-4 transition-all duration-300 transform hover:scale-110"
                 aria-label="Instagram"
               >
                 <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -367,7 +367,7 @@ const ContactUs = () => {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white bg-opacity-20 hover:bg-opacity-30 backdrop-blur-sm rounded-full p-4 transition-all duration-300 transform hover:scale-110"
+                className="bg-[#2b2b2b]  bg-opacity-20 hover:bg-opacity-30 backdrop-blur-sm rounded-full p-4 transition-all duration-300 transform hover:scale-110"
                 aria-label="Facebook"
               >
                 <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -378,7 +378,7 @@ const ContactUs = () => {
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white bg-opacity-20 hover:bg-opacity-30 backdrop-blur-sm rounded-full p-4 transition-all duration-300 transform hover:scale-110"
+                className="bg-[#2b2b2b] bg-opacity-20 hover:bg-opacity-30 backdrop-blur-sm rounded-full p-4 transition-all duration-300 transform hover:scale-110"
                 aria-label="Twitter"
               >
                 <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -389,7 +389,7 @@ const ContactUs = () => {
                 href="https://youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white bg-opacity-20 hover:bg-opacity-30 backdrop-blur-sm rounded-full p-4 transition-all duration-300 transform hover:scale-110"
+                className="bg-[#2b2b2b] bg-opacity-20 hover:bg-opacity-30 backdrop-blur-sm rounded-full p-4 transition-all duration-300 transform hover:scale-110"
                 aria-label="YouTube"
               >
                 <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">

@@ -32,7 +32,7 @@ const WelcomeSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 sm:mb-6 text-gray-800 px-2"
+          className="text-4xl lg:text-5xl font-bold mb-4 text-gray-800 text-center"
         >
           Welcome to Danka - Where Every Bite is a Burst of Flavor!
         </motion.h1>
@@ -53,8 +53,26 @@ const WelcomeSection = () => {
           Indian street food to your plate — fresh, hygienic, and made with
           love.
         </motion.p>
+        {/* 
+         <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-base sm:text-lg text-center mb-8 sm:mb-12 text-gray-700 max-w-4xl mx-auto px-4"
+        >
+          At Danka, every crunch of Panipuri and every spoonful of Chaat brings
+          the <em className="text-orange-600 font-semibold">dhamaka</em> of
+          authentic Indian flavors. We've taken the magic of the streets and
+          wrapped it in freshness, hygiene, and happiness — so every bite feels
+          like{" "}
+          <span className="text-orange-600 font-semibold">
+            'Wah! Kya Swad Hai!'
+          </span>
+        </motion.p> */}
 
         {/* Our Promise Section */}
+
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -67,14 +85,9 @@ const WelcomeSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-gray-800 flex items-center gap-2 px-2"
+            className="text-2xl  sm:text-3xl border-l-4 border-orange-500 font-bold mb-4 sm:mb-6 text-gray-800 flex items-center gap-2 px-2"
           >
-            <img
-              src="https://res.cloudinary.com/dtaitsw4r/image/upload/v1764747273/secured_lwckfa.png"
-              alt="our promise"
-              className="h-12 w-12"
-            />{" "}
-            Our Promise:
+            Our Promise
           </motion.h2>
           <motion.div
             variants={containerVariants}
@@ -161,25 +174,6 @@ const WelcomeSection = () => {
             </motion.div>
           </motion.div>
         </motion.div>
-
-        {/* Descriptive Paragraph */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-base sm:text-lg text-center mb-8 sm:mb-12 text-gray-700 max-w-4xl mx-auto px-4"
-        >
-          At Danka, every crunch of Panipuri and every spoonful of Chaat brings
-          the <em className="text-orange-600 font-semibold">dhamaka</em> of
-          authentic Indian flavors. We've taken the magic of the streets and
-          wrapped it in freshness, hygiene, and happiness — so every bite feels
-          like{" "}
-          <span className="text-orange-600 font-semibold">
-            'Wah! Kya Swad Hai!'
-          </span>
-        </motion.p>
-
         {/* Why Danka Section */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -193,21 +187,16 @@ const WelcomeSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-2xl text-center sm:text-3xl font-bold mb-4 sm:mb-6 text-gray-800 flex items-center gap-2 px-2"
+            className="text-2xl text-center sm:text-3xl font-bold mb-4 sm:mb-6 text-gray-800 flex items-center gap-2 px-2 border-l-4 border-orange-500"
           >
-            <img
-              src="https://res.cloudinary.com/dtaitsw4r/image/upload/v1764747271/ask_br32cb.png"
-              alt="why"
-              className="h-12 w-12"
-            />{" "}
-          <p className="text-center">Why Danka?</p>
+            <p className="text-center">Why Danka?</p>
           </motion.h2>
           <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3 sm:gap-4"
           >
             <motion.div
               variants={itemVariants}
@@ -288,22 +277,7 @@ const WelcomeSection = () => {
             <motion.div
               variants={itemVariants}
               className="flex items-center gap-2 sm:gap-3"
-            >
-              <svg
-                className="w-5 h-5 sm:w-6 sm:h-6 text-green-600 flex-shrink-0"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              <span className="text-base sm:text-lg text-gray-700">
-                Fun, Fast & Flavorful Experience
-              </span>
-            </motion.div>
+            ></motion.div>
           </motion.div>
         </motion.div>
 

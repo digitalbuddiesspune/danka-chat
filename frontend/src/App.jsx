@@ -5,7 +5,7 @@ import Footer from "./pages/Footer";
 
 const App = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Header />
       <Outlet />
       <Footer />
