@@ -84,7 +84,7 @@ const OurOffering = () => {
               key={card.id}
               variants={cardVariants}
               whileHover={{ scale: 1.05, y: -10 }}
-              className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-orange-200"
+              className="bg-white rounded-lg shadow-lg p-6 border-t-4 border-orange-500"
             >
               <div className="p-6">
                 <div className="bg-orange-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-4 mx-auto">
