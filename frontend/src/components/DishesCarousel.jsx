@@ -155,11 +155,8 @@ const DishesCarousel = () => {
         </motion.div>
 
         {/* Carousel */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.15 }}
+        <div
+         
           className="dishes-carousel"
         >
           <div className="hidden lg:block">
@@ -242,7 +239,7 @@ const DishesCarousel = () => {
               ))}
             </Slider>
           </div>
-        </motion.div>
+        </div>
 
         {/* Custom CSS for slick carousel */}
         <style>{`
