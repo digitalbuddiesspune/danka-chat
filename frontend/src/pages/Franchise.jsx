@@ -71,13 +71,13 @@ const Franchise = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
             </span>
-            <span className="text-white font-semibold text-sm md:text-base font-body">
+            <span className="text-white font-semibold text-xs md:text-sm font-body">
               🚀 India's Fastest Growing Street Food Franchise
             </span>
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold mb-6 text-white leading-tight font-heading">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 text-white leading-tight font-heading">
             Bring India's
             <br />
             <span className="bg-gradient-to-r from-yellow-300 via-yellow-200 to-yellow-300 text-transparent bg-clip-text animate-pulse">
@@ -88,11 +88,11 @@ const Franchise = () => {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl sm:text-2xl md:text-3xl mb-6 text-white/95 max-w-4xl mx-auto leading-relaxed font-light font-body">
+          <p className="text-base sm:text-lg md:text-xl mb-6 text-white/95 max-w-4xl mx-auto leading-relaxed font-light font-body">
             Love panipuri? Passionate about chaat? Turn that passion into a profitable business with <span className="font-bold text-yellow-300">Danka</span>
           </p>
 
-          <p className="text-lg sm:text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto font-body">
+          <p className="text-sm sm:text-base md:text-lg mb-8 text-white/90 max-w-3xl mx-auto font-body">
             With our trusted recipes, strong brand identity, and proven business model, Danka helps entrepreneurs serve joy, one puri at a time!
           </p>
 
@@ -102,7 +102,7 @@ const Franchise = () => {
               href="https://wa.me/911234567890"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative px-8 py-5 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-2xl font-bold text-lg shadow-2xl hover:shadow-green-500/50 transition-all duration-300 hover:scale-105 hover:-translate-y-1 flex items-center gap-3 font-body"
+              className="group relative px-8 py-5 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-2xl font-bold text-base shadow-2xl hover:shadow-green-500/50 transition-all duration-300 hover:scale-105 hover:-translate-y-1 flex items-center gap-3 font-body"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
@@ -115,7 +115,7 @@ const Franchise = () => {
 
             <a
               href="#learn-more"
-              className="px-8 py-5 bg-white/10 backdrop-blur-xl text-white rounded-2xl font-bold text-lg border-2 border-white/30 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:-translate-y-1 font-body"
+              className="px-8 py-5 bg-white/10 backdrop-blur-xl text-white rounded-2xl font-bold text-base border-2 border-white/30 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:-translate-y-1 font-body"
             >
               Learn More
             </a>
@@ -129,8 +129,8 @@ const Franchise = () => {
               { number: "100K+", label: "Happy Customers" }
             ].map((stat, i) => (
               <div key={i} className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                <div className="text-5xl font-black text-yellow-300 mb-2 font-body">{stat.number}</div>
-                <div className="text-white/90 font-medium text-lg font-body">{stat.label}</div>
+                <div className="text-3xl font-black text-yellow-300 mb-2 font-body">{stat.number}</div>
+                <div className="text-white/90 font-medium text-base font-body">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -152,11 +152,11 @@ const Franchise = () => {
           {/* Section Header */}
           <div className="text-center mb-20">
             <div className="inline-block mb-4">
-              <span className="text-orange-600 font-bold text-sm uppercase tracking-wider bg-orange-100 px-4 py-2 rounded-full font-body">
+              <span className="text-orange-600 font-bold text-xs uppercase tracking-wider bg-orange-100 px-4 py-2 rounded-full font-body">
                 Partnership Benefits
               </span>
             </div>
-            <h2 className="text-5xl md:text-6xl font-black mb-6 bg-gradient-to-r from-orange-600 via-orange-500 to-yellow-500 text-transparent bg-clip-text font-heading">
+            <h2 className="text-3xl md:text-4xl font-black mb-6 bg-gradient-to-r from-orange-600 via-orange-500 to-yellow-500 text-transparent bg-clip-text font-heading">
               Why Partner with Danka
             </h2>
             <div className="w-24 h-2 bg-gradient-to-r from-orange-500 to-yellow-500 mx-auto rounded-full" />
@@ -181,10 +181,10 @@ const Franchise = () => {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-2xl font-bold mb-4 text-gray-900 group-hover:text-orange-600 transition-colors duration-300 font-heading">
+                <h3 className="text-xl font-bold mb-4 text-gray-900 group-hover:text-orange-600 transition-colors duration-300 font-heading">
                   {benefit.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed font-body">
+                <p className="text-gray-600 text-sm leading-relaxed font-body">
                   {benefit.description}
                 </p>
 
@@ -206,14 +206,14 @@ const Franchise = () => {
           {/* Section Header */}
           <div className="text-center mb-20">
             <div className="inline-block mb-4">
-              <span className="text-yellow-300 font-bold text-sm uppercase tracking-wider bg-white/10 backdrop-blur-xl px-4 py-2 rounded-full border border-white/20 font-body">
+              <span className="text-yellow-300 font-bold text-xs uppercase tracking-wider bg-white/10 backdrop-blur-xl px-4 py-2 rounded-full border border-white/20 font-body">
                 Complete Support Package
               </span>
             </div>
-            <h2 className="text-5xl md:text-6xl font-black mb-6 text-white font-heading">
+            <h2 className="text-3xl md:text-4xl font-black mb-6 text-white font-heading">
               What You Get
             </h2>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto font-body">
+            <p className="text-base text-white/80 max-w-3xl mx-auto font-body">
               Comprehensive support to ensure your franchise success
             </p>
           </div>
@@ -226,7 +226,7 @@ const Franchise = () => {
               <div className="relative z-10">
                 <div className="flex items-center gap-4 mb-8">
                 
-                  <h3 className="text-3xl font-bold text-white font-heading">Training & Support</h3>
+                  <h3 className="text-2xl font-bold text-white font-heading">Training & Support</h3>
                 </div>
 
                 <ul className="space-y-5">
@@ -242,7 +242,7 @@ const Franchise = () => {
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
                       </div>
-                      <span className="text-white/90 text-lg leading-relaxed group-hover/item:text-white transition-colors font-body">
+                      <span className="text-white/90 text-base leading-relaxed group-hover/item:text-white transition-colors font-body">
                         {item}
                       </span>
                     </li>
@@ -258,7 +258,7 @@ const Franchise = () => {
               <div className="relative z-10">
                 <div className="flex items-center gap-4 mb-8">
                  
-                  <h3 className="text-3xl font-bold text-white font-heading">Marketing & Branding</h3>
+                  <h3 className="text-2xl font-bold text-white font-heading">Marketing & Branding</h3>
                 </div>
 
                 <ul className="space-y-5">
@@ -274,7 +274,7 @@ const Franchise = () => {
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
                       </div>
-                      <span className="text-white/90 text-lg leading-relaxed group-hover/item:text-white transition-colors font-body">
+                      <span className="text-white/90 text-base leading-relaxed group-hover/item:text-white transition-colors font-body">
                         {item}
                       </span>
                     </li>
@@ -297,20 +297,20 @@ const Franchise = () => {
         <div className="max-w-5xl mx-auto text-center relative z-10">
          
 
-          <h2 className="text-5xl md:text-6xl font-black mb-8 text-white leading-tight font-heading">
+          <h2 className="text-3xl md:text-4xl font-black mb-8 text-white leading-tight font-heading">
             Ready to Start Your
             <br />
             <span className="text-yellow-200">Danka Journey?</span>
           </h2>
 
-          <p className="text-xl md:text-2xl mb-12 text-white/95 max-w-3xl mx-auto leading-relaxed font-body">
+          <p className="text-base md:text-lg mb-12 text-white/95 max-w-3xl mx-auto leading-relaxed font-body">
             Fill out our franchise inquiry form and our team will get back to you within 48 hours to discuss your franchise opportunity.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a
               href="/#inquiry"
-              className="group px-10 py-6 bg-white text-orange-600 rounded-2xl font-bold text-xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 hover:-translate-y-1 flex items-center justify-center gap-3 font-body"
+              className="group px-10 py-6 bg-white text-orange-600 rounded-2xl font-bold text-lg shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 hover:-translate-y-1 flex items-center justify-center gap-3 font-body"
             >
               Fill Inquiry Form
               <svg className="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -322,7 +322,7 @@ const Franchise = () => {
               href="https://wa.me/911234567890"
               target="_blank"
               rel="noopener noreferrer"
-              className="group px-10 py-6 bg-green-500 hover:bg-green-600 text-white rounded-2xl font-bold text-xl shadow-2xl hover:shadow-green-500/50 transition-all duration-300 hover:scale-105 hover:-translate-y-1 flex items-center justify-center gap-3 font-body"
+              className="group px-10 py-6 bg-green-500 hover:bg-green-600 text-white rounded-2xl font-bold text-lg shadow-2xl hover:shadow-green-500/50 transition-all duration-300 hover:scale-105 hover:-translate-y-1 flex items-center justify-center gap-3 font-body"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
