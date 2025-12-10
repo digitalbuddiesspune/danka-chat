@@ -66,8 +66,8 @@ const OurOffering = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold mb-4 text-gray-800">Our Franchise Offerings</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold font-heading mb-4 text-gray-800">Our Franchise Offerings</h2>
+          <p className="text-lg font-body text-gray-600 max-w-3xl mx-auto">
             Join the Danka family and bring authentic Indian street food to your community. Choose from our range of franchise options designed to suit different locations and investment levels.
           </p>
         </motion.div>
@@ -90,12 +90,12 @@ const OurOffering = () => {
                 <div className="bg-orange-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-4 mx-auto">
                   {card.id}
                 </div>
-                <h3 className="text-2xl font-bold mb-3 text-gray-800 text-center">{card.name}</h3>
-                <p className="text-gray-600 mb-4 text-center">{card.description}</p>
+                <h3 className="text-2xl font-bold font-heading mb-3 text-gray-800 text-center">{card.name}</h3>
+                <p className="text-gray-600 font-body mb-4 text-center">{card.description}</p>
                 
                 <div className="mb-4">
-                  <h4 className="font-semibold text-gray-800 mb-2">Features:</h4>
-                  <ul className="space-y-2">
+                  <h4 className="font-semibold font-heading text-gray-800 mb-2">Features:</h4>
+                  <ul className="space-y-2 font-body">
                     {card.features.map((feature, index) => (
                       <li key={index} className="flex items-center gap-2 text-gray-700">
                         <svg className="w-5 h-5 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -122,7 +122,7 @@ const OurOffering = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-12 text-center"
         >
-          <p className="text-lg text-gray-700 mb-4">
+          <p className="text-lg font-body text-gray-700 mb-4">
             Interested in starting your own Danka franchise?
           </p>
           <motion.a

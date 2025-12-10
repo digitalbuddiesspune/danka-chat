@@ -9,11 +9,10 @@ import OurRestaurant from '../components/OurRestaurant'
 const HomePage = () => {
   return (
     <div>
-      <Hero />
+   
       <WelcomeSection />
       <DishesCarousel />
       <HappinessCard />
-      <OurOffering />
       <OurRestaurant />
       <InquiryForm />
     </div>

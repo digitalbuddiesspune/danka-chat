@@ -7,8 +7,8 @@ const OurRestaurant = () => {
       id: 1,
       name: "Danka Downtown",
       location: "City Center, Main Street",
-      type: "Premium Chat Center",
-      image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop",
+      type: "Mumbai",
+      image: "https://res.cloudinary.com/dtaitsw4r/image/upload/v1765192062/mumbai0_omdtji.webp",
       rating: 4.8,
       reviews: 250
     },
@@ -16,8 +16,8 @@ const OurRestaurant = () => {
       id: 2,
       name: "Danka Express",
       location: "Mall Food Court, Level 2",
-      type: "Express Chat Center",
-      image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop",
+      type: "Pune",
+      image: "https://res.cloudinary.com/dtaitsw4r/image/upload/v1765192063/Pune_ta31zv.jpg",
       rating: 4.6,
       reviews: 180
     },
@@ -25,8 +25,8 @@ const OurRestaurant = () => {
       id: 3,
       name: "Danka Central",
       location: "Business District, Tower Plaza",
-      type: "Standard Chat Center",
-      image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop",
+      type: "Indore",
+      image: "https://res.cloudinary.com/dtaitsw4r/image/upload/v1765192061/Indore_qzcikd.jpg",
       rating: 4.9,
       reviews: 320
     },
@@ -34,8 +34,71 @@ const OurRestaurant = () => {
       id: 4,
       name: "Danka Mobile",
       location: "Events & Festivals",
-      type: "Mobile Chat Cart",
-      image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop",
+      type: "Goa",
+      image: "https://res.cloudinary.com/dtaitsw4r/image/upload/v1765192061/Goa_j6q81l.jpg",
+      rating: 4.7,
+      reviews: 150
+    },
+     {
+      id: 5,
+      name: "Danka Mobile",
+      location: "Events & Festiva",
+      type: "Jabalpur",
+      image: "https://res.cloudinary.com/dtaitsw4r/image/upload/v1765192839/Jabalpur_nmduyj.jpg",
+      rating: 4.7,
+      reviews: 150
+    },
+     {
+      id: 6,
+      name: "Danka Mobile",
+      location: "Events & Festivals",
+      type: "Mahabaleshwar",
+      image: "https://res.cloudinary.com/dtaitsw4r/image/upload/v1765192062/Mahabaleshawar_hap0b1.jpg",
+      rating: 4.7,
+      reviews: 150
+    },
+     {
+      id: 7,
+      name: "Danka Mobile",
+      location: "Events & Festivals",
+      type: "Satara",
+      image: "https://res.cloudinary.com/dtaitsw4r/image/upload/v1765192063/Satara_zodvau.jpg",
+      rating: 4.7,
+      reviews: 150
+    },
+     {
+      id: 8,
+      name: "Danka Mobile",
+      location: "Events & Festivals",
+      type: "Panchgani",
+      image: "https://res.cloudinary.com/dtaitsw4r/image/upload/v1765192062/panchgani_hala3w.jpg",
+      rating: 4.7,
+      reviews: 150
+    },
+     {
+      id: 9,
+      name: "Danka Mobile",
+      location: "Events & Festivals",
+      type: "Satna",
+      image: "https://res.cloudinary.com/dtaitsw4r/image/upload/v1765192065/Satna_ibnyfk.png",
+      rating: 4.7,
+      reviews: 150
+    },
+     {
+      id: 10,
+      name: "Danka Mobile",
+      location: "Events & Festivals",
+      type: "Vita",
+      image: "https://res.cloudinary.com/dtaitsw4r/image/upload/v1765192064/Vita_h2c7af.avif",
+      rating: 4.7,
+      reviews: 150
+    },
+     {
+      id: 11,
+      name: "Danka Mobile",
+      location: "Events & Festivals",
+      type: "Mandsaur",
+      image: "https://res.cloudinary.com/dtaitsw4r/image/upload/v1765192062/mandsaur_nyv9cf.webp",
       rating: 4.7,
       reviews: 150
     }
@@ -74,8 +137,8 @@ const OurRestaurant = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold mb-4 text-gray-800">Our Franchise Locations</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold font-heading mb-4 text-gray-800">Now Serving in These Cities</h2>
+          <p className="text-lg font-body text-gray-600 max-w-3xl mx-auto">
             Discover our growing network of Danka franchises. Each location brings authentic Indian street food flavors to communities across the region.
           </p>
         </motion.div>
@@ -104,26 +167,6 @@ const OurRestaurant = () => {
                   {location.type}
                 </div>
               </div>
-              
-              <div className="p-6">
-                <h3 className="text-2xl font-bold mb-2 text-gray-800">{location.name}</h3>
-                <p className="text-gray-600 mb-4 flex items-center gap-2">
-                  <svg className="w-5 h-5 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                  </svg>
-                  {location.location}
-                </p>
-                
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-1">
-                    <svg className="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                    <span className="font-semibold text-gray-800">{location.rating}</span>
-                  </div>
-                  <span className="text-gray-600 text-sm">({location.reviews} reviews)</span>
-                </div>
-              </div>
             </motion.div>
           ))}
         </motion.div>
@@ -139,8 +182,8 @@ const OurRestaurant = () => {
             whileHover={{ scale: 1.02 }}
             className="bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg p-8 border border-orange-200"
           >
-            <h3 className="text-3xl font-bold mb-4 text-gray-800">Join Our Growing Network</h3>
-            <p className="text-lg text-gray-700 mb-6 max-w-2xl mx-auto">
+            <h3 className="text-3xl font-bold font-heading mb-4 text-gray-800">Join Our Growing Network</h3>
+            <p className="text-lg font-body text-gray-700 mb-6 max-w-2xl mx-auto">
               Be part of the Danka success story. We're expanding and looking for passionate entrepreneurs to bring authentic Indian street food to new communities.
             </p>
             <motion.a

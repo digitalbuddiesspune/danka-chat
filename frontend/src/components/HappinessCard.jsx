@@ -59,7 +59,7 @@ const HappinessCard = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-4xl font-bold text-center mb-4 text-gray-800"
+              className="text-4xl font-bold font-heading text-center mb-4 text-gray-800"
             >
               Your Happiness is Our Priority
             </motion.h2>
@@ -69,7 +69,7 @@ const HappinessCard = () => {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-center text-lg text-gray-600 mb-12 max-w-2xl mx-auto"
+              className="text-center text-lg font-body text-gray-600 mb-12 max-w-2xl mx-auto"
             >
               At Danka, we believe that great food brings great happiness.
               That's why we're committed to delivering the best experience with
@@ -104,10 +104,10 @@ const HappinessCard = () => {
                 
                 <img src={feature.icon} alt={feature.title} />
                 </motion.div>
-                <h3 className="text-xl font-bold mb-3 text-gray-800">
+                <h3 className="text-xl font-bold font-heading mb-3 text-gray-800">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600">{feature.description}</p>
+                <p className="text-gray-600 font-body">{feature.description}</p>
               </motion.div>
             ))}
           </motion.div>

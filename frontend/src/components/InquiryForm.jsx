@@ -100,8 +100,8 @@ const InquiryForm = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-8"
         >
-          <h2 className="text-4xl font-bold mb-4 text-gray-800">Franchise Inquiry</h2>
-          <p className="text-lg text-gray-600">
+          <h2 className="text-4xl font-bold font-heading mb-4 text-gray-800">Franchise Inquiry</h2>
+          <p className="text-lg font-body text-gray-600">
             Interested in joining the Danka family? Fill out the form below and we'll get back to you soon!
           </p>
         </motion.div>
@@ -120,7 +120,7 @@ const InquiryForm = () => {
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span className="font-semibold">Thank you! We'll contact you soon.</span>
+                <span className="font-semibold font-body">Thank you! We'll contact you soon.</span>
               </div>
             </div>
           )}
@@ -128,7 +128,7 @@ const InquiryForm = () => {
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Full Name */}
             <div>
-              <label htmlFor="fullName" className="block text-sm font-semibold text-gray-700 mb-2">
+              <label htmlFor="fullName" className="block text-sm font-semibold font-body text-gray-700 mb-2">
                 Full Name <span className="text-red-500">*</span>
               </label>
               <input
@@ -143,13 +143,13 @@ const InquiryForm = () => {
                 placeholder="Enter your full name"
               />
               {errors.fullName && (
-                <p className="mt-1 text-sm text-red-500">{errors.fullName}</p>
+                <p className="mt-1 text-sm font-body text-red-500">{errors.fullName}</p>
               )}
             </div>
 
             {/* Mobile Number */}
             <div>
-              <label htmlFor="mobileNo" className="block text-sm font-semibold text-gray-700 mb-2">
+              <label htmlFor="mobileNo" className="block text-sm font-semibold font-body text-gray-700 mb-2">
                 Mobile Number <span className="text-red-500">*</span>
               </label>
               <input
@@ -171,7 +171,7 @@ const InquiryForm = () => {
 
             {/* Email */}
             <div>
-              <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+              <label htmlFor="email" className="block text-sm font-semibold font-body text-gray-700 mb-2">
                 Email <span className="text-red-500">*</span>
               </label>
               <input
@@ -192,7 +192,7 @@ const InquiryForm = () => {
 
             {/* Franchise Cart Selection */}
             <div>
-              <label htmlFor="franchiseCart" className="block text-sm font-semibold text-gray-700 mb-2">
+              <label htmlFor="franchiseCart" className="block text-sm font-semibold font-body text-gray-700 mb-2">
                 Franchise Cart Interest <span className="text-red-500">*</span>
               </label>
               <select

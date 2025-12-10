@@ -21,8 +21,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 sm:gap-8">
           {/* Newsletter Section */}
           <div className="lg:col-span-2">
-            <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">Subscribe to the Danka newsletter</h3>
-            <p className="text-gray-400 mb-4 sm:mb-6 text-sm sm:text-base">
+            <h3 className="text-xl sm:text-2xl font-bold font-heading mb-2 sm:mb-3">Subscribe to the Danka newsletter</h3>
+            <p className="text-gray-400 mb-4 sm:mb-6 text-sm sm:text-base font-body">
               Latest news, announcements and updates direct to your inbox
             </p>
             <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-2 sm:gap-3">
@@ -42,7 +42,7 @@ const Footer = () => {
               </button>
             </form>
             {subscribed && (
-              <p className="mt-2 sm:mt-3 text-green-400 text-xs sm:text-sm">Thank you for subscribing!</p>
+              <p className="mt-2 sm:mt-3 text-green-400 text-xs sm:text-sm font-body">Thank you for subscribing!</p>
             )}
           </div>
 
@@ -51,8 +51,8 @@ const Footer = () => {
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
               {/* Getting Started */}
               <div>
-                <h4 className="text-gray-300 font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Getting Started</h4>
-                <ul className="space-y-2 sm:space-y-3">
+                <h4 className="text-gray-300 font-semibold font-heading mb-3 sm:mb-4 text-sm sm:text-base">Getting Started</h4>
+                <ul className="space-y-2 sm:space-y-3 font-body">
                   <li>
                     <NavLink to="/" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
                       Introduction
@@ -83,8 +83,8 @@ const Footer = () => {
 
               {/* Menu & Services */}
               <div>
-                <h4 className="text-gray-300 font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Menu & Services</h4>
-                <ul className="space-y-2 sm:space-y-3">
+                <h4 className="text-gray-300 font-semibold font-heading mb-3 sm:mb-4 text-sm sm:text-base">Menu & Services</h4>
+                <ul className="space-y-2 sm:space-y-3 font-body">
                   <li>
                     <a href="#panipuri" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
                       Panipuri
@@ -110,8 +110,8 @@ const Footer = () => {
 
               {/* Company */}
               <div>
-                <h4 className="text-gray-300 font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Company</h4>
-                <ul className="space-y-2 sm:space-y-3">
+                <h4 className="text-gray-300 font-semibold font-heading mb-3 sm:mb-4 text-sm sm:text-base">Company</h4>
+                <ul className="space-y-2 sm:space-y-3 font-body">
                   <li>
                     <NavLink to="/about-us" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
                       About us
@@ -137,8 +137,8 @@ const Footer = () => {
 
               {/* Legal */}
               <div>
-                <h4 className="text-gray-300 font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Legal</h4>
-                <ul className="space-y-2 sm:space-y-3">
+                <h4 className="text-gray-300 font-semibold font-heading mb-3 sm:mb-4 text-sm sm:text-base">Legal</h4>
+                <ul className="space-y-2 sm:space-y-3 font-body">
                   <li>
                     <a href="#terms" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
                       Terms of Service
@@ -171,12 +171,12 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 py-4 sm:py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4">
             {/* Copyright */}
-            <div className="text-gray-400 text-xs sm:text-sm text-center md:text-left">
+            <div className="text-gray-400 text-xs sm:text-sm font-body text-center md:text-left">
               ©2025 Danka - All rights reserved
             </div>
 
             {/* Center Links */}
-            <div className="flex gap-4 sm:gap-6 text-xs sm:text-sm">
+            <div className="flex gap-4 sm:gap-6 text-xs sm:text-sm font-body">
               <a href="#terms" className="text-gray-400 hover:text-white transition-colors">
                 Terms & Conditions
               </a>

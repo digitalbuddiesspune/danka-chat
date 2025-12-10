@@ -141,14 +141,14 @@ const DishesCarousel = () => {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <p className="inline-flex items-center px-4 py-1 rounded-full bg-orange-100 text-orange-700 text-sm font-medium mb-3">
+          <p className="inline-flex items-center px-4 py-1 rounded-full bg-orange-100 text-orange-700 text-sm font-medium font-body mb-3">
             Taste the TestoBites Experience
           </p>
-          <h2 className="text-4xl font-bold mb-4 text-gray-800">
+          <h2 className="text-4xl font-bold font-heading mb-4 text-gray-800">
             Our Signature Street Food Dishes
           </h2>
 
-          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg font-body text-gray-600 max-w-2xl mx-auto">
             Handcrafted with love, hygiene and authentic Indian flavors that
             bring the streets to your plate.
           </p>
@@ -180,15 +180,15 @@ const DishesCarousel = () => {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-90" />
                       <div className="absolute top-3 left-3">
-                        <span className="inline-flex items-center px-3 py-1 rounded-full bg-orange-500/90 text-white text-xs font-semibold shadow-sm">
+                        <span className="inline-flex items-center px-3 py-1 rounded-full bg-orange-500/90 text-white text-xs font-semibold font-body shadow-sm">
                           TestoBites Special
                         </span>
                       </div>
                       <div className="absolute bottom-0 left-0 right-0 p-4">
-                        <h3 className="text-lg md:text-xl font-bold text-white drop-shadow-sm">
+                        <h3 className="text-lg md:text-xl font-bold font-heading text-white drop-shadow-sm">
                           {dish.name}
                         </h3>
-                        <p className="mt-1 text-xs md:text-sm text-orange-100/90">
+                        <p className="mt-1 text-xs md:text-sm font-body text-orange-100/90">
                           Crispy, spicy & full of flavor – a must-try from our
                           street food menu.
                         </p>
@@ -220,15 +220,15 @@ const DishesCarousel = () => {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-90" />
                       <div className="absolute top-3 left-3">
-                        <span className="inline-flex items-center px-3 py-1 rounded-full bg-orange-500/90 text-white text-xs font-semibold shadow-sm">
+                        <span className="inline-flex items-center px-3 py-1 rounded-full bg-orange-500/90 text-white text-xs font-semibold font-body shadow-sm">
                           TestoBites Special
                         </span>
                       </div>
                       <div className="absolute bottom-0 left-0 right-0 p-4">
-                        <h3 className="text-lg md:text-xl font-bold text-white drop-shadow-sm">
+                        <h3 className="text-lg md:text-xl font-bold font-heading text-white drop-shadow-sm">
                           {dish.name}
                         </h3>
-                        <p className="mt-1 text-xs md:text-sm text-orange-100/90">
+                        <p className="mt-1 text-xs md:text-sm font-body text-orange-100/90">
                           Crispy, spicy & full of flavor – a must-try from our
                           street food menu.
                         </p>
