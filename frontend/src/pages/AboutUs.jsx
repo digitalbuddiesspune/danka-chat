@@ -82,12 +82,16 @@ const AboutUs = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section
-        className="relative text-white py-12 sm:py-16 md:py-20 px-4 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('/crop-plate-with-salad.jpg')`,
-        }}
-      >
+      <section className="relative text-white py-12 sm:py-16 md:py-20 px-4 overflow-hidden">
+        {/* Blurred Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url('/crop-plate-with-salad.jpg')`,
+            filter: "blur(3px)",
+            transform: "scale(1.1)",
+          }}
+        />
         {/* Overlay for better text readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-orange-900/10 to-yellow-900/10"></div>
         <div className="relative max-w-6xl mx-auto text-center z-10">

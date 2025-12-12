@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import Logo from "../assets/Logo.svg";
 
 const Navbar = () => {
   const [hoveredItem, setHoveredItem] = useState(null);
@@ -81,7 +82,7 @@ const Navbar = () => {
           className="text-2xl font-bold text-orange-600 hover:text-orange-700 transition-colors"
           onClick={closeMobileMenu}
         >
-          Danka
+          <img src={Logo} alt="Danka Logo" className="w-16 h-16" />
         </NavLink>
       </div>
       

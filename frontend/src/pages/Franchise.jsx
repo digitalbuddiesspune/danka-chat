@@ -99,7 +99,7 @@ const Franchise = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <a
-              href="https://wa.me/911234567890"
+              href="https://wa.me/917887882300"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative px-8 py-5 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-2xl font-bold text-base shadow-2xl hover:shadow-green-500/50 transition-all duration-300 hover:scale-105 hover:-translate-y-1 flex items-center gap-3 font-body"
@@ -319,7 +319,7 @@ const Franchise = () => {
             </a>
 
             <a
-              href="https://wa.me/911234567890"
+              href="https://wa.me/917887882300"
               target="_blank"
               rel="noopener noreferrer"
               className="group px-10 py-6 bg-green-500 hover:bg-green-600 text-white rounded-2xl font-bold text-lg shadow-2xl hover:shadow-green-500/50 transition-all duration-300 hover:scale-105 hover:-translate-y-1 flex items-center justify-center gap-3 font-body"

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import Logo from '../assets/Logo.svg'
 
 const Footer = () => {
   const [email, setEmail] = useState('')
@@ -18,150 +19,99 @@ const Footer = () => {
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 py-8 sm:py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          {/* Logo Section with Tagline */}
+          <div>
+            <img src={Logo} alt="Danka Logo" className="w-20 h-20 sm:w-24 sm:h-24 mb-3" />
+            <p className="text-gray-400 text-xs sm:text-sm font-body">
+              For Panipuri & Chaat Lovers
+            </p>
+          </div>
+
           {/* Newsletter Section */}
-          <div className="lg:col-span-2">
-            <h3 className="text-xl sm:text-2xl font-bold font-heading mb-2 sm:mb-3">Subscribe to the Danka newsletter</h3>
-            <p className="text-gray-400 mb-4 sm:mb-6 text-sm sm:text-base font-body">
+          <div>
+            <h3 className="text-base sm:text-lg font-bold font-heading mb-2">Subscribe to the Danka newsletter</h3>
+            <p className="text-gray-400 mb-3 text-xs sm:text-sm font-body">
               Latest news, announcements and updates direct to your inbox
             </p>
-            <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-2 sm:gap-3">
+            <form onSubmit={handleSubscribe} className="flex flex-col gap-2">
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="flex-1 px-3 sm:px-4 py-2 sm:py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm sm:text-base"
+                className="w-full px-3 py-2 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm"
                 required
               />
               <button
                 type="submit"
-                className="bg-green-500 hover:bg-green-600 text-gray-900 font-semibold px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-colors duration-300 whitespace-nowrap text-sm sm:text-base"
+                className="bg-green-500 hover:bg-green-600 text-gray-900 font-semibold px-4 py-2 rounded-lg transition-colors duration-300 whitespace-nowrap text-sm"
               >
                 Subscribe now
               </button>
             </form>
             {subscribed && (
-              <p className="mt-2 sm:mt-3 text-green-400 text-xs sm:text-sm font-body">Thank you for subscribing!</p>
+              <p className="mt-2 text-green-400 text-xs font-body">Thank you for subscribing!</p>
             )}
           </div>
 
-          {/* Navigation Links */}
-          <div className="lg:col-span-3">
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
-              {/* Getting Started */}
-              <div>
-                <h4 className="text-gray-300 font-semibold font-heading mb-3 sm:mb-4 text-sm sm:text-base">Getting Started</h4>
-                <ul className="space-y-2 sm:space-y-3 font-body">
-                  <li>
-                    <NavLink to="/" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
-                      Introduction
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/about-us" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
-                      About Us
-                    </NavLink>
-                  </li>
-                  <li>
-                    <a href="#menu" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
-                      Our Menu
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#franchise" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
-                      Franchise
-                    </a>
-                  </li>
-                  <li>
-                    <NavLink to="/contact-us" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
-                      Contact
-                    </NavLink>
-                  </li>
-                </ul>
-              </div>
+          {/* Getting Started */}
+          <div>
+            <h4 className="text-gray-300 font-semibold font-heading mb-3 text-sm">Getting Started</h4>
+            <ul className="space-y-2 font-body">
+              <li>
+                <NavLink to="/" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
+                  Introduction
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/about-us" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
+                  About Us
+                </NavLink>
+              </li>
+              <li>
+                <a href="#menu" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
+                  Our Menu
+                </a>
+              </li>
+              <li>
+                <a href="#franchise" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
+                  Franchise
+                </a>
+              </li>
+              <li>
+                <NavLink to="/contact-us" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
+                  Contact
+                </NavLink>
+              </li>
+            </ul>
+          </div>
 
-              {/* Menu & Services */}
-              <div>
-                <h4 className="text-gray-300 font-semibold font-heading mb-3 sm:mb-4 text-sm sm:text-base">Menu & Services</h4>
-                <ul className="space-y-2 sm:space-y-3 font-body">
-                  <li>
-                    <a href="#panipuri" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
-                      Panipuri
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#chaat" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
-                      Chaat
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#offers" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
-                      Special Offers
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#catering" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
-                      Catering
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Company */}
-              <div>
-                <h4 className="text-gray-300 font-semibold font-heading mb-3 sm:mb-4 text-sm sm:text-base">Company</h4>
-                <ul className="space-y-2 sm:space-y-3 font-body">
-                  <li>
-                    <NavLink to="/about-us" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
-                      About us
-                    </NavLink>
-                  </li>
-                  <li>
-                    <a href="#careers" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
-                      Work With us
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#blog" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
-                      Our Blog
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#press" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
-                      Press
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Legal */}
-              <div>
-                <h4 className="text-gray-300 font-semibold font-heading mb-3 sm:mb-4 text-sm sm:text-base">Legal</h4>
-                <ul className="space-y-2 sm:space-y-3 font-body">
-                  <li>
-                    <NavLink to="/terms" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
-                      Terms of Service
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/privacy" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
-                      Privacy Policy
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/cookies" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
-                      Cookies Policy
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/data-processing" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
-                      Data Processing
-                    </NavLink>
-                  </li>
-                </ul>
-              </div>
-            </div>
+          {/* Legal */}
+          <div>
+            <h4 className="text-gray-300 font-semibold font-heading mb-3 text-sm">Legal</h4>
+            <ul className="space-y-2 font-body">
+              <li>
+                <NavLink to="/terms" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
+                  Terms of Service
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/privacy" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
+                  Privacy Policy
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/cookies" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
+                  Cookies Policy
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/data-processing" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
+                  Data Processing
+                </NavLink>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

@@ -83,14 +83,11 @@ const WelcomeSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="inline-block mb-6 md:mb-8"
         >
-          <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-red-600 rounded-full blur-lg opacity-75 group-hover:opacity-100 transition-opacity" />
-            <span className="relative px-6 md:px-8 py-2.5 md:py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white text-xs md:text-sm font-bold rounded-full shadow-2xl inline-flex items-center gap-2 backdrop-blur-sm border border-white/20">
-              <span className="animate-pulse"></span>
-              WELCOME TO DANKA
-              <span className="animate-pulse"></span>
-            </span>
-          </div>
+          <span className="relative mt-10 px-6 md:px-8 py-2.5 md:py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white text-xs md:text-lg font-bold rounded-full inline-flex items-center gap-2 backdrop-blur-sm border border-white/20">
+            <span className="animate-pulse"></span>
+            WELCOME TO DANKA
+            <span className="animate-pulse"></span>
+          </span>
         </motion.div>
 
         {/* Main Heading */}
