@@ -57,7 +57,7 @@ const OurOffering = () => {
   }
 
   return (
-    <section className="py-16 px-4 bg-white">
+    <section className="py-16 px-4 text-white" style={{ background: 'linear-gradient(to bottom, #000000, #1a0e06, #2b1205)' }}>
       <div className="max-w-7xl mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: -30 }}
@@ -66,8 +66,8 @@ const OurOffering = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold font-heading mb-4 text-gray-800">Our Franchise Offerings</h2>
-          <p className="text-lg font-body text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold font-heading mb-4 text-white">Our Franchise Offerings</h2>
+          <p className="text-lg font-body text-white/90 max-w-3xl mx-auto">
             Join the Danka family and bring authentic Indian street food to your community. Choose from our range of franchise options designed to suit different locations and investment levels.
           </p>
         </motion.div>
@@ -122,7 +122,7 @@ const OurOffering = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-12 text-center"
         >
-          <p className="text-lg font-body text-gray-700 mb-4">
+          <p className="text-lg font-body text-white/90 mb-4">
             Interested in starting your own Danka franchise?
           </p>
           <motion.a

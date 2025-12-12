@@ -197,7 +197,7 @@ const Franchise = () => {
       </section>
 
       {/* What You Get Section */}
-      <section className="py-24 px-4 bg-gradient-to-br from-slate-900 via-orange-900 to-amber-900 relative overflow-hidden">
+      <section className="py-24 px-4 relative overflow-hidden text-white" style={{ background: 'linear-gradient(to bottom, #000000, #1a0e06, #2b1205)' }}>
         {/* Decorative Elements */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-yellow-500/10 rounded-full blur-3xl" />
@@ -287,7 +287,7 @@ const Franchise = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-4 bg-gradient-to-br from-slate-900 via-orange-900 to-amber-900 relative overflow-hidden">
+      <section className="py-24 px-4 relative overflow-hidden text-white" style={{ background: 'linear-gradient(to bottom, #000000, #1a0e06, #2b1205)' }}>
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-10 left-10 w-64 h-64 bg-white/10 rounded-full blur-3xl animate-pulse" />

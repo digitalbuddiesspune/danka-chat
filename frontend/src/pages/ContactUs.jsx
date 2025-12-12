@@ -509,7 +509,7 @@ const ContactUs = () => {
       </section>
 
       {/* Connect With Us Online Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-orange-500 to-yellow-500 text-white">
+      <section className="py-16 px-4 text-white" style={{ background: 'linear-gradient(to bottom, #000000, #1a0e06, #2b1205)' }}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <div className="w-24 h-1 bg-white mx-auto mb-8"></div>
@@ -523,7 +523,7 @@ const ContactUs = () => {
 
             <div className="flex flex-wrap justify-center gap-6">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/danka_panipuri?igsh=MWEzZmpyYXRtMGNiMg=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#2b2b2b] bg-opacity-20 hover:bg-opacity-30 backdrop-blur-sm rounded-full p-4 transition-all duration-300 transform hover:scale-110"

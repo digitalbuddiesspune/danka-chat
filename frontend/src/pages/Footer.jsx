@@ -140,24 +140,24 @@ const Footer = () => {
                 <h4 className="text-gray-300 font-semibold font-heading mb-3 sm:mb-4 text-sm sm:text-base">Legal</h4>
                 <ul className="space-y-2 sm:space-y-3 font-body">
                   <li>
-                    <a href="#terms" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
+                    <NavLink to="/terms" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
                       Terms of Service
-                    </a>
+                    </NavLink>
                   </li>
                   <li>
-                    <a href="#privacy" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
+                    <NavLink to="/privacy" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
                       Privacy Policy
-                    </a>
+                    </NavLink>
                   </li>
                   <li>
-                    <a href="#cookies" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
+                    <NavLink to="/cookies" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
                       Cookies Policy
-                    </a>
+                    </NavLink>
                   </li>
                   <li>
-                    <a href="#data" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
+                    <NavLink to="/data-processing" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">
                       Data Processing
-                    </a>
+                    </NavLink>
                   </li>
                 </ul>
               </div>
@@ -177,12 +177,12 @@ const Footer = () => {
 
             {/* Center Links */}
             <div className="flex gap-4 sm:gap-6 text-xs sm:text-sm font-body">
-              <a href="#terms" className="text-gray-400 hover:text-white transition-colors">
+              <NavLink to="/terms" className="text-gray-400 hover:text-white transition-colors">
                 Terms & Conditions
-              </a>
-              <a href="#privacy" className="text-gray-400 hover:text-white transition-colors">
+              </NavLink>
+              <NavLink to="/privacy" className="text-gray-400 hover:text-white transition-colors">
                 Privacy Policy
-              </a>
+              </NavLink>
             </div>
 
             {/* Social Media Icons */}
@@ -210,7 +210,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/danka_panipuri?igsh=MWEzZmpyYXRtMGNiMg=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"

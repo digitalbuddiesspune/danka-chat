@@ -131,7 +131,7 @@ const DishesCarousel = () => {
     ],
   };
   return (
-    <section className="py-16 px-4 bg-gradient-to-b from-white via-orange-50/60 to-orange-100/40">
+    <section className="py-16 px-4 text-white">
       <div className="max-w-7xl mx-auto flex flex-col gap-10">
         {/* Heading */}
         <motion.div

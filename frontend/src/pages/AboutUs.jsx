@@ -279,20 +279,20 @@ const AboutUs = () => {
       </section>
 
       {/* Our Journey Timeline */}
-      <section className="py-16 px-4 bg-gray-50">
+      <section className="py-16 px-4 text-white" style={{ background: 'linear-gradient(to bottom, #000000, #1a0e06, #2b1205)' }}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold font-heading mb-4 text-gray-800">
+            <h2 className="text-4xl font-bold font-heading mb-4 text-white">
               Our Journey
             </h2>
-            <p className="text-xl font-body text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl font-body text-white/90 max-w-3xl mx-auto">
               From a simple idea to a growing network of flavor enthusiasts
             </p>
           </div>
 
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-4 sm:left-8 md:left-1/2 transform md:-translate-x-1/2 w-0.5 sm:w-1 h-full bg-orange-300"></div>
+            <div className="absolute left-4 sm:left-8 md:left-1/2 transform md:-translate-x-1/2 w-0.5 sm:w-1 h-full bg-orange-500"></div>
 
             <div className="space-y-8 sm:space-y-12">
               {milestones.map((milestone, index) => (
@@ -350,7 +350,7 @@ const AboutUs = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-orange-500 to-yellow-500 text-black">
+      <section className="py-16 px-4 text-white" style={{ background: 'linear-gradient(to bottom, #000000, #1a0e06, #2b1205)' }}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold font-heading mb-4">
@@ -362,9 +362,9 @@ const AboutUs = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-20">
+            <div className="bg-white/10 bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-20">
               <h3 className="text-2xl font-bold font-heading mb-4">
-                ✨ Quality Assurance
+                 Quality Assurance
               </h3>
               <ul className="space-y-2 text-lg font-body">
                 <li>• All products made in refined oil</li>
@@ -373,9 +373,9 @@ const AboutUs = () => {
                 <li>• Central kitchen with strict quality control</li>
               </ul>
             </div>
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-20">
+            <div className="bg-white/10 bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-20">
               <h3 className="text-2xl font-bold font-heading mb-4">
-                🎨 Authentic Experience
+                Authentic Experience
               </h3>
               <ul className="space-y-2 text-lg font-body">
                 <li>• Traditional recipes with modern hygiene</li>
@@ -389,12 +389,12 @@ const AboutUs = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 text-white" style={{ background: 'linear-gradient(to bottom, #000000, #1a0e06, #2b1205)' }}>
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold font-heading mb-6 text-gray-800">
+          <h2 className="text-4xl font-bold font-heading mb-6 text-white">
             Join Us on This Flavorful Journey
           </h2>
-          <p className="text-xl font-body text-gray-600 mb-8">
+          <p className="text-xl font-body text-white/90 mb-8">
             Whether you're a customer looking for the best chaat in town or an
             entrepreneur interested in our franchise opportunity, we'd love to
             have you be part of the Danka family!

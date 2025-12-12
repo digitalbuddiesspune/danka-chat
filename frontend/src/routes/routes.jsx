@@ -8,6 +8,10 @@ import HomePage from "../pages/HomePage";
 import AboutUs from "../pages/AboutUs";
 import ContactUs from "../pages/ContactUs";
 import Franchise from "../pages/Franchise";
+import TermsOfService from "../pages/TermsOfService";
+import PrivacyPolicy from "../pages/PrivacyPolicy";
+import CookiesPolicy from "../pages/CookiesPolicy";
+import DataProcessing from "../pages/DataProcessing";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -16,6 +20,10 @@ const router = createBrowserRouter(
       <Route path="/about-us" element={<AboutUs />} />
       <Route path="/contact-us" element={<ContactUs />} />
       <Route path="/franchise" element={<Franchise />} />
+      <Route path="/terms" element={<TermsOfService />} />
+      <Route path="/privacy" element={<PrivacyPolicy />} />
+      <Route path="/cookies" element={<CookiesPolicy />} />
+      <Route path="/data-processing" element={<DataProcessing />} />
     </Route>
   )
 );
