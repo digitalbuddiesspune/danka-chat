@@ -6,37 +6,30 @@ const Reviews = () => {
     {
       id: 1,
       url: "https://res.cloudinary.com/dtaitsw4r/video/upload/v1765607049/opening_mp5al4.mov",
-      title: "Customer Review 1",
     },
     {
       id: 2,
       url: "https://res.cloudinary.com/dtaitsw4r/video/upload/v1765607050/First_vaapy4.mov",
-      title: "Customer Review 2",
     },
     {
       id: 3,
       url: "https://res.cloudinary.com/dtaitsw4r/video/upload/v1765607049/second_y26sja.mov",
-      title: "Customer Review 3",
     },
     {
       id: 4,
       url: "https://res.cloudinary.com/dtaitsw4r/video/upload/v1765607049/third_aczond.mov",
-      title: "Customer Review 4",
     },
     {
       id: 5,
       url: "https://res.cloudinary.com/dtaitsw4r/video/upload/v1765607051/fourth_t4jthe.mov",
-      title: "Customer Review 5",
     },
     {
       id: 6,
       url: "https://res.cloudinary.com/dtaitsw4r/video/upload/v1765607455/fifth_afmkvs.mov",
-      title: "Customer Review 6",
     },
     {
       id: 7,
       url: "https://res.cloudinary.com/dtaitsw4r/video/upload/v1765607454/six_ldqa9q.mov",
-      title: "Customer Review 7",
     },
   ];
 
@@ -131,7 +124,12 @@ const Reviews = () => {
       </section>
 
       {/* Call to Action Section */}
-      <section className="py-16 px-4 text-white" style={{ background: 'linear-gradient(to bottom, #000000, #1a0e06, #2b1205)' }}>
+      <section
+        className="py-16 px-4 text-white"
+        style={{
+          background: "linear-gradient(to bottom, #000000, #1a0e06, #2b1205)",
+        }}
+      >
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2
             initial={{ opacity: 0, y: -30 }}
@@ -149,8 +147,8 @@ const Reviews = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg sm:text-xl font-body text-white/90 mb-8"
           >
-            Loved your visit? We'd love to hear from you! Share your feedback and
-            help us continue to serve you better.
+            Loved your visit? We'd love to hear from you! Share your feedback
+            and help us continue to serve you better.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -179,4 +177,3 @@ const Reviews = () => {
 };
 
 export default Reviews;
-
