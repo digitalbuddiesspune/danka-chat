@@ -10,14 +10,14 @@ const DishesCarousel = () => {
       id: 1,
       image:
         "https://res.cloudinary.com/dtaitsw4r/image/upload/v1764667363/WhatsApp_Image_2025-10-24_at_17.18.24_f1d0aa6d_dc7roj.jpg",
-      name: "Delicious Panipuri",
+      name: "Delicious Chat",
       description: "Crispy, spicy & full of flavor – a must-try from our street food menu.",
     },
     {
       id: 2,
       image:
         "https://res.cloudinary.com/dtaitsw4r/image/upload/v1764667362/IMG-20251016-WA0011_rzx4wy.jpg",
-      name: "Tasty Chaat",
+      name: "Katori Chaat",
       description: "A perfect mix of crunchy, tangy & spicy flavors topped with fresh chutneys and masalas.",
 
     },
@@ -67,7 +67,7 @@ const DishesCarousel = () => {
       id: 9,
       image:
         "https://res.cloudinary.com/dtaitsw4r/image/upload/v1764667361/IMG-20251016-WA0009_ttx3nb.jpg",
-      name: "Irresistible Chaat",
+      name: "Paani Puri",
       description: "Dry-style chaat made with crisp puris, flavorful masalas, and perfectly balanced spices.",
     },
     {
