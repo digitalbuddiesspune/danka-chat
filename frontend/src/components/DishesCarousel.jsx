@@ -232,7 +232,7 @@ const DishesCarousel = () => {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-90" />
                       <div className="absolute top-3 left-3">
                         <span className="inline-flex items-center px-3 py-1 rounded-full bg-orange-500/90 text-white text-xs font-semibold font-body shadow-sm">
-                          TestoBites Special
+                          Danka Special
                         </span>
                       </div>
                       <div className="absolute bottom-0 left-0 right-0 p-4">
