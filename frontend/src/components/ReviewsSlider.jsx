@@ -316,7 +316,7 @@ const ReviewsSlider = () => {
           </Slider>
         </div>
         <div className="reviews-carousel md:hidden">
-          <Slider {...settings}>
+          <Slider {...settingsMobile}>
             {reviewVideos.map((video, index) => (
               <div key={video.id} className="px-3">
                 <motion.div
