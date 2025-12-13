@@ -75,7 +75,7 @@ const WelcomeSection = () => {
       </div>
 
       {/* Content Overlay */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 py-10 md:py-16 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 py-10 md:py-16 text-center overflow-visible">
         {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: -50 }}
@@ -95,12 +95,12 @@ const WelcomeSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-4xl md:text-6xl lg:text-8xl font-black mb-6 md:mb-8 leading-tight md:leading-none"
+          className="text-4xl md:text-6xl lg:text-8xl font-black mb-6 md:mb-8 leading-tight md:leading-[1.1]"
         >
-          <span className="block text-white drop-shadow-2xl">
+          <span className="block text-white drop-shadow-2xl py-1">
             Where Every
           </span>
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 drop-shadow-2xl animate-pulse">
+          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 drop-shadow-2xl animate-pulse py-1">
             Bite is Magic
           </span>
         </motion.h1>
