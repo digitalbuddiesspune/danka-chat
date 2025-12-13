@@ -6,6 +6,7 @@ const Navbar = () => {
   const [hoveredItem, setHoveredItem] = useState(null);
   const [typedText, setTypedText] = useState("");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const intervalRef = useRef(null);
   const hoveredItemRef = useRef(null);
 
@@ -22,6 +23,16 @@ const Navbar = () => {
         clearInterval(intervalRef.current);
       }
     };
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setScrolled(scrollPosition > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleMouseEnter = (item, hoverText) => {
@@ -74,7 +85,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex justify-between items-center p-4 relative">
+    <nav className={`flex justify-between items-center p-4 fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      scrolled 
+        ? "backdrop-blur-md bg-white/30 shadow-lg" 
+        : "bg-transparent"
+    }`}>
       <div>
         <NavLink 
           to={"/"} 

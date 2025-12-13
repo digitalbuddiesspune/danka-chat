@@ -12,6 +12,7 @@ import TermsOfService from "../pages/TermsOfService";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
 import CookiesPolicy from "../pages/CookiesPolicy";
 import DataProcessing from "../pages/DataProcessing";
+import Reviews from "../pages/Reviews";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,6 +25,7 @@ const router = createBrowserRouter(
       <Route path="/privacy" element={<PrivacyPolicy />} />
       <Route path="/cookies" element={<CookiesPolicy />} />
       <Route path="/data-processing" element={<DataProcessing />} />
+      <Route path="/reviews" element={<Reviews />} />
     </Route>
   )
 );

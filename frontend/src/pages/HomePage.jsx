@@ -5,6 +5,7 @@ import HappinessCard from '../components/HappinessCard'
 import OurOffering from '../components/OurOffering'
 import InquiryForm from '../components/InquiryForm'
 import OurRestaurant from '../components/OurRestaurant'
+import ReviewsSlider from '../components/ReviewsSlider'
 
 const HomePage = () => {
   return (
@@ -14,6 +15,7 @@ const HomePage = () => {
       <DishesCarousel />
       <HappinessCard />
       <OurRestaurant />
+      <ReviewsSlider />
       <InquiryForm />
     </div>
   )
