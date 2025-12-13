@@ -187,6 +187,37 @@ const ReviewsSlider = () => {
       },
     ],
   };
+  const settingsMobile = {
+    dots: true,
+    infinite: true,
+    speed: 600,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    pauseOnHover: true,
+    cssEase: "ease-out",
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
 
   return (
     <section className="py-16 px-4 bg-gray-50">
@@ -208,7 +239,83 @@ const ReviewsSlider = () => {
         </motion.div>
 
         {/* Carousel */}
-        <div className="reviews-carousel">
+        <div className="reviews-carousel hidden md:block">
+          <Slider {...settings}>
+            {reviewVideos.map((video, index) => (
+              <div key={video.id} className="px-3">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.4 }}
+                  transition={{ duration: 0.5, delay: index * 0.05 }}
+                  whileHover={{ y: -10, scale: 1.02 }}
+                  className="group rounded-2xl transition-all duration-300 overflow-hidden cursor-pointer"
+                  onClick={() => handleVideoClick(video.id)}
+                >
+                  <div className="relative w-full max-w-[280px] mx-auto aspect-[9/16] overflow-hidden bg-gray-900">
+                    {playingVideo === video.id ? (
+                      <video
+                        ref={(el) => {
+                          if (el) {
+                            videoRefs.current[video.id] = el;
+                            el.setAttribute('data-video-id', video.id);
+                          }
+                        }}
+                        className="w-full h-full object-contain"
+                        controls
+                        autoPlay
+                        playsInline
+                        muted={false}
+                        onPlay={() => handleVideoPlay(video.id)}
+                        onPause={() => handleVideoPause(video.id)}
+                        onEnded={() => handleVideoEnded(video.id)}
+                      >
+                        <source src={video.url} type="video/quicktime" />
+                        <source src={video.url} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    ) : (
+                      <>
+                        <img
+                          src={video.thumbnail}
+                          alt={`Review ${video.id}`}
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                          onError={(e) => {
+                            // Fallback: Try alternative Cloudinary thumbnail format
+                            const altThumbnail = video.url
+                              .replace('/video/upload/', '/image/upload/so_0/')
+                              .replace(/\.(mov|mp4)$/i, '.jpg');
+                            
+                            if (e.target.src !== altThumbnail) {
+                              e.target.src = altThumbnail;
+                            } else {
+                              // Final fallback: show gray background with play icon
+                              e.target.style.display = 'none';
+                              e.target.parentElement.style.backgroundColor = '#1f2937';
+                            }
+                          }}
+                        />
+                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
+                          <div className="w-16 h-16 bg-orange-500/90 rounded-full flex items-center justify-center group-hover:bg-orange-500 group-hover:scale-110 transition-all duration-300">
+                            <svg
+                              className="w-8 h-8 text-white ml-1"
+                              fill="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path d="M8 5v14l11-7z" />
+                            </svg>
+                          </div>
+                        </div>
+                      </>
+                    )}
+                  </div>
+                </motion.div>
+              </div>
+            ))}
+          </Slider>
+        </div>
+        <div className="reviews-carousel md:hidden">
           <Slider {...settings}>
             {reviewVideos.map((video, index) => (
               <div key={video.id} className="px-3">
