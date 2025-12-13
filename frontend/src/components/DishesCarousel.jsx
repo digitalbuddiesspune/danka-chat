@@ -10,7 +10,7 @@ const DishesCarousel = () => {
       id: 1,
       image:
         "https://res.cloudinary.com/dtaitsw4r/image/upload/v1764667363/WhatsApp_Image_2025-10-24_at_17.18.24_f1d0aa6d_dc7roj.jpg",
-      name: "Delicious Chat",
+      name: "Delicious Bhel",
       description: "Crispy, spicy & full of flavor – a must-try from our street food menu.",
     },
     {
@@ -32,7 +32,7 @@ const DishesCarousel = () => {
       id: 4,
       image:
         "https://res.cloudinary.com/dtaitsw4r/image/upload/v1764667362/IMG-20251016-WA0013_jcj0hd.jpg",
-      name: "Authentic Flavors",
+      name: "Masala Papdi Chaat",
       description: "Crispy puris loaded with potatoes, chutneys, and topped with crunchy sev for extra zing.",
     },
     {
@@ -46,21 +46,21 @@ const DishesCarousel = () => {
       id: 6,
       image:
         "https://res.cloudinary.com/dtaitsw4r/image/upload/v1764667361/IMG-20251016-WA0010_lwamfi.jpg",
-      name: "Spicy Delights",
+      name: "Sukhi Bhel",
       description:"Light, crunchy & tangy puffed-rice chaat mixed with fresh veggies and chutneys."
     },
     {
       id: 7,
       image:
         "https://res.cloudinary.com/dtaitsw4r/image/upload/v1764667361/IMG-20251016-WA0007_d5ljhp.jpg",
-      name: "Flavorful Treats",
+      name: "Samosa Chaat",
       description: "Crispy samosas crushed and topped with spicy chana, yogurt, and bold desi chutneys.",
     },
     {
       id: 8,
       image:
         "https://res.cloudinary.com/dtaitsw4r/image/upload/v1764667361/IMG-20251016-WA0006_wyosue.jpg",
-      name: "Traditional Taste",
+      name: "Ragda Chaat",
       description: "Crunchy papdi layered with potatoes, yogurt, and sweet-tangy chutneys in every bite.",
     },
     {
