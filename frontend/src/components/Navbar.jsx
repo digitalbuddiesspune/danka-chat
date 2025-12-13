@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import Logo from "../assets/Logo.svg";
+import Logo from "../assets/Logo1.svg";
 
 const Navbar = () => {
   const [hoveredItem, setHoveredItem] = useState(null);

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import Logo from '../assets/Logo.svg'
+import Logo from '../assets/Logo1.svg'
 
 const Footer = () => {
   const [email, setEmail] = useState('')
