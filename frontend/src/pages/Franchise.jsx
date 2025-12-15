@@ -64,7 +64,7 @@ const Franchise = () => {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 py-20 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 py-24 text-center">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-6 py-3 mb-8 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 shadow-2xl">
             <span className="relative flex h-3 w-3">

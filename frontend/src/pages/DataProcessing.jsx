@@ -5,7 +5,7 @@ const DataProcessing = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="text-white py-16 px-4" style={{ background: 'linear-gradient(to bottom, #000000, #1a0e06, #2b1205)' }}>
+      <section className="text-white py-20 px-4" style={{ background: 'linear-gradient(to bottom, #000000, #1a0e06, #2b1205)' }}>
         <div className="max-w-4xl mx-auto text-center">
           <motion.h1
             initial={{ opacity: 0, y: -30 }}

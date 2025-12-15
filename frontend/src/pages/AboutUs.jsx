@@ -82,7 +82,7 @@ const AboutUs = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative text-white py-12 sm:py-16 md:py-20 px-4 overflow-hidden">
+      <section className="relative text-white py-20 px-4 overflow-hidden">
         {/* Blurred Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"

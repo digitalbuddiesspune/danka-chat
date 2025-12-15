@@ -37,7 +37,7 @@ const ContactUs = () => {
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section
-        className="relative text-white py-12 sm:py-16 md:py-20 px-4 bg-cover bg-center bg-no-repeat min-h-[60vh] sm:min-h-[70vh]"
+        className="relative text-white py-24 lg:py-20 px-4 bg-cover bg-center bg-no-repeat min-h-[50vh] sm:min-h-[70vh]"
         style={{
           backgroundImage: `url('https://res.cloudinary.com/dtaitsw4r/image/upload/v1765268458/PaniPuri2_s9ybzu.jpg')`,
         }}
@@ -538,7 +538,7 @@ const ContactUs = () => {
                 </svg>
               </a>
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/dankaforpanipurilovers"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#2b2b2b]  bg-opacity-20 hover:bg-opacity-30 backdrop-blur-sm rounded-full p-4 transition-all duration-300 transform hover:scale-110"
