@@ -163,7 +163,7 @@ const OurRestaurant = () => {
                   alt={location.name}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute top-2 right-2 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                <div className="absolute top-2 right-2 bg-yellow-500 text-gray-900 px-3 py-1 rounded-full text-sm font-semibold">
                   {location.type}
                 </div>
               </div>
@@ -180,7 +180,7 @@ const OurRestaurant = () => {
         >
           <motion.div
             whileHover={{ scale: 1.02 }}
-            className="bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg p-8 border border-orange-200"
+            className="bg-gradient-to-r from-gray-50 to-yellow-50 rounded-lg p-8 border border-yellow-200"
           >
             <h3 className="text-3xl font-bold font-heading mb-4 text-gray-800">Join Our Growing Network</h3>
             <p className="text-lg font-body text-gray-700 mb-6 max-w-2xl mx-auto">
@@ -190,7 +190,7 @@ const OurRestaurant = () => {
               href="#inquiry"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-block bg-orange-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-orange-600 transition-colors duration-300 shadow-lg hover:shadow-xl"
+              className="inline-block bg-yellow-500 text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-yellow-600 transition-colors duration-300 shadow-lg hover:shadow-xl"
             >
               Become a Franchise Partner
             </motion.a>

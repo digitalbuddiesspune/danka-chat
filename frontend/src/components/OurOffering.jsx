@@ -84,14 +84,14 @@ const OurOffering = () => {
               key={card.id}
               variants={cardVariants}
               whileHover={{ scale: 1.05, y: -10 }}
-              className="bg-white rounded-lg shadow-lg p-6 border-t-4 border-orange-500"
+              className="bg-white rounded-lg shadow-lg p-6 border-t-4 border-yellow-500"
             >
               <div className="p-6">
-                <div className="bg-orange-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-4 mx-auto">
+                <div className="bg-yellow-500 text-gray-900 rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-4 mx-auto">
                   {card.id}
                 </div>
                 <h3 className="text-2xl font-bold font-heading mb-3 text-gray-800 text-center">{card.name}</h3>
-                <p className="text-gray-600 font-body mb-4 text-center">{card.description}</p>
+                {/* <p className="text-gray-600 font-body mb-4 text-center">{card.description}</p> */}
                 
                 <div className="mb-4">
                   <h4 className="font-semibold font-heading text-gray-800 mb-2">Features:</h4>
@@ -107,7 +107,7 @@ const OurOffering = () => {
                   </ul>
                 </div>
 
-                <div className="bg-orange-500 text-white rounded-lg p-3 text-center font-bold">
+                <div className="bg-yellow-500 text-gray-900 rounded-lg p-3 text-center font-bold">
                   {card.investment}
                 </div>
               </div>
@@ -129,7 +129,7 @@ const OurOffering = () => {
             href="#inquiry"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-block bg-orange-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-orange-600 transition-colors duration-300 shadow-lg hover:shadow-xl"
+            className="inline-block bg-yellow-500 text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-yellow-600 transition-colors duration-300 shadow-lg hover:shadow-xl"
           >
             Get Started Today
           </motion.a>

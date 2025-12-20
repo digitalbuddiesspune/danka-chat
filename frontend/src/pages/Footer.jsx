@@ -25,7 +25,7 @@ const Footer = () => {
     <footer className="relative bg-gray-900 text-white overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-orange-500 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-yellow-500 rounded-full blur-3xl"></div>
       </div>
 
       {/* Main Footer Content */}
@@ -42,7 +42,7 @@ const Footer = () => {
                 />
               </div>
               <div>
-                <h2 className="text-2xl sm:text-3xl font-bold text-orange-400">
+                <h2 className="text-2xl sm:text-3xl font-bold text-yellow-400">
                   Danka
                 </h2>
                 <p className="text-gray-400 text-sm">
@@ -84,7 +84,7 @@ const Footer = () => {
                   aria-label={social.label}
                 >
                   <svg
-                    className="w-7 h-7 text-orange-400"
+                    className="w-7 h-7 text-yellow-400"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -96,10 +96,10 @@ const Footer = () => {
           </div>
 
           {/* Newsletter Section - Highlighted */}
-          <div className="lg:col-span-4 bg-orange-500/10 backdrop-blur-sm rounded-2xl p-6 border border-orange-500/20">
+          <div className="lg:col-span-4 bg-yellow-500/10 backdrop-blur-sm rounded-2xl p-6 border border-yellow-500/20">
             <div className="flex items-center gap-2 mb-3">
               <svg
-                className="w-6 h-6 text-orange-400"
+                className="w-6 h-6 text-yellow-400"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -124,20 +124,20 @@ const Footer = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="your.email@example.com"
-                  className="w-full px-4 py-3 rounded-xl bg-gray-900/50 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all text-sm placeholder-gray-500"
+                  className="w-full px-4 py-3 rounded-xl bg-gray-900/50 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all text-sm placeholder-gray-500"
                 />
               </div>
               <button
                 onClick={handleSubscribe}
-                className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 shadow-lg shadow-orange-500/25 hover:shadow-xl hover:shadow-orange-500/40 hover:scale-[1.02] text-sm"
+                className="w-full bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold px-6 py-3 rounded-xl transition-all duration-300 shadow-lg shadow-yellow-500/25 hover:shadow-xl hover:shadow-yellow-500/40 hover:scale-[1.02] text-sm"
               >
                 Subscribe Now
               </button>
             </div>
             {subscribed && (
-              <div className="mt-3 p-3 bg-orange-500/20 border border-orange-500/30 rounded-xl flex items-center gap-2">
+              <div className="mt-3 p-3 bg-yellow-500/20 border border-yellow-500/30 rounded-xl flex items-center gap-2">
                 <svg
-                  className="w-5 h-5 text-orange-400 shrink-0"
+                  className="w-5 h-5 text-yellow-400 shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -149,7 +149,7 @@ const Footer = () => {
                     d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </svg>
-                <p className="text-orange-400 text-sm font-medium">
+                <p className="text-yellow-400 text-sm font-medium">
                   Successfully subscribed!
                 </p>
               </div>
@@ -160,7 +160,7 @@ const Footer = () => {
           <div className="lg:col-span-3 grid grid-cols-2 gap-8">
             {/* Getting Started */}
             <div>
-              <h4 className="text-orange-400 font-bold mb-4 text-sm uppercase tracking-wider">
+              <h4 className="text-yellow-400 font-bold mb-4 text-sm uppercase tracking-wider">
                 Explore
               </h4>
               <ul className="space-y-2.5">
@@ -175,18 +175,18 @@ const Footer = () => {
                       <a
                         href={link.to}
                         onClick={(e) => handleLinkClick(e, link.to)}
-                        className="text-gray-300 hover:text-orange-400 transition-colors text-sm flex items-center gap-2 group cursor-pointer"
+                        className="text-gray-300 hover:text-yellow-400 transition-colors text-sm flex items-center gap-2 group cursor-pointer"
                       >
-                        <span className="w-1.5 h-1.5 rounded-full bg-gray-600 group-hover:bg-orange-400 transition-colors"></span>
+                        <span className="w-1.5 h-1.5 rounded-full bg-gray-600 group-hover:bg-yellow-400 transition-colors"></span>
                         {link.label}
                       </a>
                     ) : (
                       <Link
                         to={link.to}
                         onClick={(e) => handleLinkClick(e, link.to)}
-                        className="text-gray-300 hover:text-orange-400 transition-colors text-sm flex items-center gap-2 group cursor-pointer"
+                        className="text-gray-300 hover:text-yellow-400 transition-colors text-sm flex items-center gap-2 group cursor-pointer"
                       >
-                        <span className="w-1.5 h-1.5 rounded-full bg-gray-600 group-hover:bg-orange-400 transition-colors"></span>
+                        <span className="w-1.5 h-1.5 rounded-full bg-gray-600 group-hover:bg-yellow-400 transition-colors"></span>
                         {link.label}
                       </Link>
                     )}
@@ -197,7 +197,7 @@ const Footer = () => {
 
             {/* Legal */}
             <div>
-              <h4 className="text-orange-400 font-bold mb-4 text-sm uppercase tracking-wider">
+              <h4 className="text-yellow-400 font-bold mb-4 text-sm uppercase tracking-wider">
                 Legal
               </h4>
               <ul className="space-y-2.5">
@@ -211,9 +211,9 @@ const Footer = () => {
                     <Link
                       to={link.to}
                       onClick={(e) => handleLinkClick(e, link.to)}
-                      className="text-gray-300 hover:text-orange-400 transition-colors text-sm flex items-center gap-2 group cursor-pointer"
+                      className="text-gray-300 hover:text-yellow-400 transition-colors text-sm flex items-center gap-2 group cursor-pointer"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-gray-600 group-hover:bg-orange-400 transition-colors"></span>
+                      <span className="w-1.5 h-1.5 rounded-full bg-gray-600 group-hover:bg-yellow-400 transition-colors"></span>
                       {link.label}
                     </Link>
                   </li>
@@ -253,7 +253,7 @@ const Footer = () => {
               <Link
                 to="/terms"
                 onClick={(e) => handleLinkClick(e, "/terms")}
-                className="text-gray-400 hover:text-orange-400 transition-colors cursor-pointer"
+                className="text-gray-400 hover:text-yellow-400 transition-colors cursor-pointer"
               >
                 Terms
               </Link>
@@ -261,7 +261,7 @@ const Footer = () => {
               <Link
                 to="/privacy"
                 onClick={(e) => handleLinkClick(e, "/privacy")}
-                className="text-gray-400 hover:text-orange-400 transition-colors cursor-pointer"
+                className="text-gray-400 hover:text-yellow-400 transition-colors cursor-pointer"
               >
                 Privacy
               </Link>

@@ -297,7 +297,7 @@ const ReviewsSlider = () => {
                           }}
                         />
                         <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
-                          <div className="w-16 h-16 bg-orange-500/90 rounded-full flex items-center justify-center group-hover:bg-orange-500 group-hover:scale-110 transition-all duration-300">
+                          <div className="w-16 h-16 bg-yellow-500/90 rounded-full flex items-center justify-center group-hover:bg-yellow-500 group-hover:scale-110 transition-all duration-300">
                             <svg
                               className="w-8 h-8 text-white ml-1"
                               fill="currentColor"
@@ -373,7 +373,7 @@ const ReviewsSlider = () => {
                           }}
                         />
                         <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
-                          <div className="w-16 h-16 bg-orange-500/90 rounded-full flex items-center justify-center group-hover:bg-orange-500 group-hover:scale-110 transition-all duration-300">
+                          <div className="w-16 h-16 bg-yellow-500/90 rounded-full flex items-center justify-center group-hover:bg-yellow-500 group-hover:scale-110 transition-all duration-300">
                             <svg
                               className="w-8 h-8 text-white ml-1"
                               fill="currentColor"

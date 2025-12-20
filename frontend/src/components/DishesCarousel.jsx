@@ -152,7 +152,7 @@ const DishesCarousel = () => {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <p className="inline-flex items-center px-4 py-1 rounded-full bg-orange-100 text-orange-700 text-sm font-medium font-body mb-3">
+          <p className="inline-flex items-center px-4 py-1 rounded-full bg-yellow-100 text-yellow-700 text-sm font-medium font-body mb-3">
             Taste the TestoBites Experience
           </p>
           <h2 className="text-4xl font-bold font-heading mb-4 text-gray-800">
@@ -180,7 +180,7 @@ const DishesCarousel = () => {
                     viewport={{ once: true, amount: 0.4 }}
                     transition={{ duration: 0.5, delay: index * 0.05 }}
                     whileHover={{ y: -10, scale: 1.03 }}
-                    className="group bg-white/90 backdrop-blur-sm rounded-2xl shadow-md hover:shadow-2xl border border-orange-100 transition-all duration-300 overflow-hidden"
+                    className="group bg-white/90 backdrop-blur-sm rounded-2xl shadow-md hover:shadow-2xl border border-yellow-100 transition-all duration-300 overflow-hidden"
                   >
                     <div className="relative aspect-[4/3] overflow-hidden">
                       <img
@@ -191,7 +191,7 @@ const DishesCarousel = () => {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-90" />
                       <div className="absolute top-3 left-3">
-                        <span className="inline-flex items-center px-3 py-1 rounded-full bg-orange-500/90 text-white text-xs font-semibold font-body shadow-sm">
+                        <span className="inline-flex items-center px-3 py-1 rounded-full bg-yellow-500/90 text-white text-xs font-semibold font-body shadow-sm">
                           Danka Special
                         </span>
                       </div>
@@ -199,7 +199,7 @@ const DishesCarousel = () => {
                         <h3 className="text-lg md:text-xl font-bold font-heading text-white drop-shadow-sm">
                           {dish.name}
                         </h3>
-                        <p className="mt-1 text-xs md:text-sm font-body text-orange-100/90">
+                        <p className="mt-1 text-xs md:text-sm font-body text-yellow-100/90">
                           {dish.description}
                          
                         </p>
@@ -220,7 +220,7 @@ const DishesCarousel = () => {
                     viewport={{ once: true, amount: 0.4 }}
                     transition={{ duration: 0.5, delay: index * 0.05 }}
                     whileHover={{ y: -10, scale: 1.03 }}
-                    className="group bg-white/90 backdrop-blur-sm rounded-2xl shadow-md hover:shadow-2xl border border-orange-100 transition-all duration-300 overflow-hidden"
+                    className="group bg-white/90 backdrop-blur-sm rounded-2xl shadow-md hover:shadow-2xl border border-yellow-100 transition-all duration-300 overflow-hidden"
                   >
                     <div className="relative aspect-[4/3] overflow-hidden">
                       <img
@@ -231,7 +231,7 @@ const DishesCarousel = () => {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-90" />
                       <div className="absolute top-3 left-3">
-                        <span className="inline-flex items-center px-3 py-1 rounded-full bg-orange-500/90 text-white text-xs font-semibold font-body shadow-sm">
+                        <span className="inline-flex items-center px-3 py-1 rounded-full bg-yellow-500/90 text-white text-xs font-semibold font-body shadow-sm">
                           Danka Special
                         </span>
                       </div>
@@ -239,7 +239,7 @@ const DishesCarousel = () => {
                         <h3 className="text-lg md:text-xl font-bold font-heading text-white drop-shadow-sm">
                           {dish.name}
                         </h3>
-                        <p className="mt-1 text-xs md:text-sm font-body text-orange-100/90">
+                        <p className="mt-1 text-xs md:text-sm font-body text-yellow-100/90">
                           Crispy, spicy & full of flavor – a must-try from our
                           street food menu.
                         </p>

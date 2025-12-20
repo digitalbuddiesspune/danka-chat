@@ -47,7 +47,7 @@ const Reviews = () => {
           }}
         />
         {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-900/10 to-yellow-900/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/10 to-yellow-900/10"></div>
         <div className="relative max-w-6xl mx-auto text-center z-10">
           <motion.h1
             initial={{ opacity: 0, y: -30 }}
@@ -95,7 +95,7 @@ const Reviews = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ scale: 1.02, y: -5 }}
-                className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-orange-100"
+                className="bg-gradient-to-br from-gray-50 to-yellow-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-yellow-100"
               >
                 <div className="relative w-full aspect-video bg-gray-900">
                   <video
@@ -159,7 +159,7 @@ const Reviews = () => {
           >
             <a
               href="/contact-us"
-              className="bg-orange-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-orange-600 transition-colors duration-300 shadow-lg hover:shadow-xl font-body"
+              className="bg-yellow-500 text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-yellow-600 transition-colors duration-300 shadow-lg hover:shadow-xl font-body"
             >
               Contact Us
             </a>

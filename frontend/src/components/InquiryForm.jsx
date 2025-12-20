@@ -91,7 +91,7 @@ const InquiryForm = () => {
   }
 
   return (
-    <section id="inquiry" className="py-16 px-4 bg-gradient-to-br from-gray-50 to-orange-50">
+    <section id="inquiry" className="py-16 px-4 bg-gradient-to-br from-gray-50 to-yellow-50">
       <div className="max-w-2xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: -30 }}
@@ -137,7 +137,7 @@ const InquiryForm = () => {
                 name="fullName"
                 value={formData.fullName}
                 onChange={handleChange}
-                className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 ${
+                className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 ${
                   errors.fullName ? 'border-red-500' : 'border-gray-300'
                 }`}
                 placeholder="Enter your full name"
@@ -158,7 +158,7 @@ const InquiryForm = () => {
                 name="mobileNo"
                 value={formData.mobileNo}
                 onChange={handleChange}
-                className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 ${
+                className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 ${
                   errors.mobileNo ? 'border-red-500' : 'border-gray-300'
                 }`}
                 placeholder="Enter your 10-digit mobile number"
@@ -180,7 +180,7 @@ const InquiryForm = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 ${
+                className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 ${
                   errors.email ? 'border-red-500' : 'border-gray-300'
                 }`}
                 placeholder="Enter your email address"
@@ -200,7 +200,7 @@ const InquiryForm = () => {
                 name="franchiseCart"
                 value={formData.franchiseCart}
                 onChange={handleChange}
-                className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 ${
+                className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 ${
                   errors.franchiseCart ? 'border-red-500' : 'border-gray-300'
                 }`}
               >
@@ -222,7 +222,7 @@ const InquiryForm = () => {
               disabled={isSubmitting}
               whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
               whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
-              className="w-full bg-orange-500 text-white py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors duration-300 disabled:bg-gray-400 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
+              className="w-full bg-yellow-500 text-gray-900 py-3 rounded-lg font-semibold hover:bg-yellow-600 transition-colors duration-300 disabled:bg-gray-400 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
             >
               {isSubmitting ? 'Submitting...' : 'Contact Us'}
             </motion.button>

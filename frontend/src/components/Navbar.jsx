@@ -84,27 +84,45 @@ const Navbar = () => {
     setIsMobileMenuOpen(false);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  const handleNavClick = () => {
+    scrollToTop();
+    closeMobileMenu();
+  };
+
   return (
-    <nav className={`flex justify-between items-center p-4 fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav className={`fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-4 py-3 lg:px-10 transition-all duration-300 ${
       scrolled 
-        ? "backdrop-blur-md bg-white/30 shadow-lg" 
+        ? "backdrop-blur-md bg-white/80 shadow-lg" 
         : "bg-transparent"
     }`}>
       <div>
         <NavLink 
           to={"/"} 
           exact="true" 
-          className="text-2xl font-bold text-orange-600 hover:text-orange-700 transition-colors"
-          onClick={closeMobileMenu}
+          className="text-2xl font-bold transition-colors"
+          onClick={handleNavClick}
         >
-          <img src={Logo} alt="Danka Logo" className="w-16 h-16" />
+          <img 
+            src={Logo} 
+            alt="Danka Logo" 
+            className={`w-16 h-16 lg:w-20 lg:h-20 transition-all duration-300 ${
+              scrolled ? "" : "drop-shadow-lg"
+            }`} 
+          />
         </NavLink>
       </div>
       
       {/* Mobile Menu Icon */}
       <button
         onClick={toggleMobileMenu}
-        className="md:hidden text-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500 rounded p-2"
+        className={`md:hidden ${scrolled ? "text-gray-900" : "text-white"} focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded p-2 transition-colors`}
         aria-label="Toggle menu"
       >
         {isMobileMenuOpen ? (
@@ -150,22 +168,23 @@ const Navbar = () => {
             >
               <NavLink
                 to={item.path}
+                onClick={scrollToTop}
                 className={({ isActive }) =>
-                  `relative text-orange-600 font-medium transition-all duration-300 hover:text-orange-600 ${
-                    isActive ? "text-orange-600" : ""
+                  `relative ${scrolled ? "text-gray-900" : "text-white"} font-medium transition-all duration-300 hover:text-yellow-500 ${
+                    isActive ? "text-yellow-500" : ""
                   }`
                 }
               >
                 {item.label}
                 {hoveredItem === item && (
-                  <span className="absolute left-0 top-full mt-1 text-xs text-orange-500 font-normal whitespace-nowrap">
+                  <span className={`absolute left-0 top-full mt-1 text-xs ${scrolled ? "text-gray-600" : "text-yellow-300"} font-normal whitespace-nowrap`}>
                     {typedText}
                     <span className="animate-pulse">|</span>
                   </span>
                 )}
               </NavLink>
               {/* Hover underline effect */}
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-600 transition-all duration-300 group-hover:w-full"></span>
+              <span className={`absolute bottom-0 left-0 w-0 h-0.5 ${scrolled ? "bg-gray-900" : "bg-yellow-400"} transition-all duration-300 group-hover:w-full`}></span>
             </li>
           ))}
         </ul>
@@ -184,10 +203,10 @@ const Navbar = () => {
             <li key={index} className="border-b border-gray-200 last:border-b-0">
               <NavLink
                 to={item.path}
-                onClick={closeMobileMenu}
+                onClick={handleNavClick}
                 className={({ isActive }) =>
-                  `block px-6 py-3 text-orange-600 font-medium transition-colors duration-300 hover:bg-orange-50 ${
-                    isActive ? "bg-orange-50 text-orange-700" : ""
+                  `block px-6 py-3 text-gray-900 font-medium transition-colors duration-300 hover:bg-gray-100 ${
+                    isActive ? "bg-gray-100 text-yellow-600" : ""
                   }`
                 }
               >

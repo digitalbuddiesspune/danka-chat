@@ -10,11 +10,12 @@ import ReviewsSlider from '../components/ReviewsSlider'
 const HomePage = () => {
   return (
     <div>
-   
+      <Hero/>
       <WelcomeSection />
       <DishesCarousel />
       <HappinessCard />
       <OurRestaurant />
+      <OurOffering/>
       <ReviewsSlider />
       <InquiryForm />
     </div>

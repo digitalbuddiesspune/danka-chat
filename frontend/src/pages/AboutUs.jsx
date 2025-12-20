@@ -82,8 +82,8 @@ const AboutUs = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative text-white py-20 px-4 overflow-hidden">
-        {/* Blurred Background Image */}
+      {/* <section className="relative text-white py-20 px-4 overflow-hidden">
+      
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
@@ -92,17 +92,10 @@ const AboutUs = () => {
             transform: "scale(1.1)",
           }}
         />
-        {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-900/10 to-yellow-900/10"></div>
+     
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/10 to-yellow-900/10"></div>
         <div className="relative max-w-6xl mx-auto text-center z-10">
-          {/* <motion.div
-            initial={{ scale: 0, rotate: -180 }}
-            animate={{ scale: 1, rotate: 0 }}
-            transition={{ duration: 0.8, type: "spring" }}
-            className="text-4xl sm:text-5xl md:text-6xl mb-3 sm:mb-4"
-          >
-            🌍
-          </motion.div> */}
+        
           <motion.h1
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -121,10 +114,11 @@ const AboutUs = () => {
             authentic Indian street food to your plate
           </motion.p>
         </div>
-      </section>
+      </section> */}
 
       {/* Our Story Section */}
-      <section className="py-8 sm:py-12 md:py-16 px-4 bg-white">
+      <section className="py-24 px-4 bg-black/80 text-white"
+       style={{ background: 'linear-gradient(to bottom, #000000, #1a0e06, #2b1205)' }}>
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: -30 }}
@@ -133,9 +127,9 @@ const AboutUs = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-8 sm:mb-12"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-heading mb-4 sm:mb-6 text-gray-800 px-2">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-heading mb-4 sm:mb-6 text-gray-200 px-2">
               Our Story —{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-red-600 to-pink-600">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-100 via-gray-50 to-yellow-200">
                 From a Street Food Dream to a Flavor Revolution
               </span>
             </h2>
@@ -146,11 +140,11 @@ const AboutUs = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="prose prose-lg max-w-4xl mx-auto text-gray-700"
+            className="prose prose-lg max-w-4xl mx-auto text-gray-300"
           >
             <p className="text-base sm:text-lg md:text-xl font-body mb-4 sm:mb-6 leading-relaxed px-2">
               Danka was born out of one simple idea:{" "}
-              <strong className="text-orange-600 font-body">
+              <strong className="text-yellow-600 font-body">
                 "Street food should be fun, flavorful, and clean!"
               </strong>
             </p>
@@ -175,7 +169,7 @@ const AboutUs = () => {
           >
             <motion.div
               whileHover={{ scale: 1.05, x: 10 }}
-              className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-lg p-4 sm:p-6 md:p-8 border-l-4 border-orange-500"
+              className="bg-gradient-to-br from-gray-50 to-yellow-50 rounded-lg p-4 sm:p-6 md:p-8 border-l-4 border-yellow-500"
             >
               <h3 className="text-xl sm:text-2xl font-bold font-heading mb-3 sm:mb-4 text-gray-800">
                 Our Vision
@@ -187,7 +181,7 @@ const AboutUs = () => {
             </motion.div>
             <motion.div
               whileHover={{ scale: 1.05, x: -10 }}
-              className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-lg p-4 sm:p-6 md:p-8 border-l-4 border-orange-500"
+              className="bg-gradient-to-br from-gray-50 to-yellow-50 rounded-lg p-4 sm:p-6 md:p-8 border-l-4 border-yellow-500"
             >
               <h3 className="text-xl sm:text-2xl font-bold font-heading mb-3 sm:mb-4 text-gray-800">
                 Our Vibe
@@ -201,7 +195,7 @@ const AboutUs = () => {
       </section>
 
       {/* Our Mission Section */}
-      {/* <section className="py-16 px-4 bg-gray-50">
+       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4 text-gray-800">Our Mission</h2>
@@ -234,7 +228,7 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-      </section> */}
+      </section> 
 
       {/* Our Values Section */}
       <section className="py-16 px-4 bg-white">
@@ -269,7 +263,7 @@ const AboutUs = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ scale: 1.05, y: -10 }}
-                className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-lg p-6 hover:shadow-xl transition-all duration-300 border border-orange-100"
+                className="bg-gradient-to-br from-gray-50 to-yellow-50 rounded-lg p-6 hover:shadow-xl transition-all duration-300 border border-yellow-100"
               >
                 <div className="text-4xl mb-4">{value.icon}</div>
                 <h3 className="text-xl font-bold font-heading mb-3 text-gray-800">
@@ -296,7 +290,7 @@ const AboutUs = () => {
 
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-4 sm:left-8 md:left-1/2 transform md:-translate-x-1/2 w-0.5 sm:w-1 h-full bg-orange-500"></div>
+            <div className="absolute left-4 sm:left-8 md:left-1/2 transform md:-translate-x-1/2 w-0.5 sm:w-1 h-full bg-yellow-500"></div>
 
             <div className="space-y-8 sm:space-y-12">
               {milestones.map((milestone, index) => (
@@ -320,7 +314,7 @@ const AboutUs = () => {
                       delay: index * 0.2 + 0.3,
                       type: "spring",
                     }}
-                    className="absolute left-4 sm:left-8 md:left-1/2 transform md:-translate-x-1/2 w-3 h-3 sm:w-4 sm:h-4 bg-orange-500 rounded-full border-2 sm:border-4 border-white shadow-lg z-10"
+                    className="absolute left-4 sm:left-8 md:left-1/2 transform md:-translate-x-1/2 w-3 h-3 sm:w-4 sm:h-4 bg-yellow-500 rounded-full border-2 sm:border-4 border-white shadow-lg z-10"
                   ></motion.div>
 
                   {/* Content */}
@@ -333,9 +327,9 @@ const AboutUs = () => {
                   >
                     <motion.div
                       whileHover={{ scale: 1.02 }}
-                      className="bg-white rounded-lg shadow-lg p-4 sm:p-6 border-l-4 border-orange-500"
+                      className="bg-white rounded-lg shadow-lg p-4 sm:p-6 border-l-4 border-yellow-500"
                     >
-                      <div className="text-orange-600 font-bold text-base sm:text-lg mb-2">
+                      <div className="text-yellow-600 font-bold text-base sm:text-lg mb-2">
                         {milestone.year}
                       </div>
                       <h3 className="text-xl sm:text-2xl font-bold font-heading mb-2 sm:mb-3 text-gray-800">
@@ -393,7 +387,8 @@ const AboutUs = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 px-4 text-white" style={{ background: 'linear-gradient(to bottom, #000000, #1a0e06, #2b1205)' }}>
+      <section className="py-16 px-4 text-white" 
+      style={{ background: 'linear-gradient(to bottom, #000000, #1a0e06, #2b1205)' }}>
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold font-heading mb-6 text-white">
             Join Us on This Flavorful Journey
@@ -406,7 +401,7 @@ const AboutUs = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact-us"
-              className="bg-orange-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-orange-600 transition-colors duration-300 shadow-lg hover:shadow-xl"
+              className="bg-yellow-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-yellow-600 transition-colors duration-300 shadow-lg hover:shadow-xl"
             >
               Contact Us
             </a>

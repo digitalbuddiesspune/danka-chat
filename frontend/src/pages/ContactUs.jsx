@@ -95,7 +95,7 @@ const ContactUs = () => {
               whileInView={{ width: 96 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="h-1 bg-orange-500 mx-auto mb-8"
+              className="h-1 bg-yellow-500 mx-auto mb-8"
             ></motion.div>
           </motion.div>
 
@@ -108,14 +108,14 @@ const ContactUs = () => {
           >
             <motion.div
               whileHover={{ scale: 1.02 }}
-              className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-lg p-4 sm:p-6 md:p-8 shadow-lg"
+              className="bg-gradient-to-br from-gray-50 to-yellow-50 rounded-lg p-4 sm:p-6 md:p-8 shadow-lg"
             >
               <h3 className="text-xl sm:text-2xl font-bold font-heading mb-4 sm:mb-6 text-gray-800">
                 Head Office:
               </h3>
               <div className="space-y-3 sm:space-y-4">
                 <div className="flex items-center gap-3 sm:gap-4">
-                  <div className="bg-orange-500 text-white rounded-full p-2 sm:p-3 flex-shrink-0">
+                  <div className="bg-yellow-500 text-white rounded-full p-2 sm:p-3 flex-shrink-0">
                     <svg
                       className="w-5 h-5 sm:w-6 sm:h-6"
                       fill="none"
@@ -136,21 +136,21 @@ const ContactUs = () => {
                     </p>
                     <a
                       href="tel:+917887882300"
-                      className="text-orange-600 hover:text-orange-700 text-base sm:text-lg font-semibold font-body break-all"
+                      className="text-yellow-600 hover:text-yellow-700 text-base sm:text-lg font-semibold font-body break-all"
                     >
                       +91 788 788 2300
                     </a>
-                    <span className="border-l border-2 border-orange-500 mx-4"></span>
+                    <span className="border-l border-2 border-yellow-500 mx-4"></span>
                     <a
                       href="tel:+916262488809"
-                      className="text-orange-600 hover:text-orange-700 text-base sm:text-lg font-semibold font-body break-all"
+                      className="text-yellow-600 hover:text-yellow-700 text-base sm:text-lg font-semibold font-body break-all"
                     >
                       +91 626 248 8809
                     </a>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 sm:gap-4">
-                  <div className="bg-orange-500 text-white rounded-full p-2 sm:p-3 flex-shrink-0">
+                  <div className="bg-yellow-500 text-white rounded-full p-2 sm:p-3 flex-shrink-0">
                     <svg
                       className="w-5 h-5 sm:w-6 sm:h-6"
                       fill="none"
@@ -171,14 +171,14 @@ const ContactUs = () => {
                     </p>
                     <a
                       href="mailto:info@dankachaat.com"
-                      className="text-orange-600 hover:text-orange-700 text-base sm:text-lg font-semibold font-body break-all"
+                      className="text-yellow-600 hover:text-yellow-700 text-base sm:text-lg font-semibold font-body break-all"
                     >
                       info@dankachaat.com
                     </a>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 sm:gap-4">
-                  <div className="bg-orange-500 text-white rounded-full p-2 sm:p-3 flex-shrink-0">
+                  <div className="bg-yellow-500 text-white rounded-full p-2 sm:p-3 flex-shrink-0">
                     <svg
                       className="w-5 h-5 sm:w-6 sm:h-6"
                       fill="none"
@@ -203,7 +203,7 @@ const ContactUs = () => {
                     <p className="text-gray-600 font-semibold font-body text-sm sm:text-base">
                       Address:
                     </p>
-                    <p  className="text-orange-600 hover:text-orange-700 text-base sm:text-lg font-semibold font-body break-all">Office No. 506, Sterling Center Opposite Arora Tower, MG Road,Camp Pune, Maharashtra 411001</p>
+                    <p  className="text-yellow-600 hover:text-yellow-700 text-base sm:text-lg font-semibold font-body break-all">Office No. 506, Sterling Center Opposite Arora Tower, MG Road,Camp Pune, Maharashtra 411001</p>
                   </div>
                 </div>
               </div>
@@ -216,7 +216,7 @@ const ContactUs = () => {
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <div className="w-24 h-1 bg-orange-500 mx-auto mb-8"></div>
+            <div className="w-24 h-1 bg-yellow-500 mx-auto mb-8"></div>
           </div>
 
           <div className="max-w-3xl mx-auto">
@@ -231,7 +231,7 @@ const ContactUs = () => {
                 Fill out our{" "}
                 <Link
                   to="/#inquiry"
-                  className="text-orange-600 hover:text-orange-700 font-semibold font-body underline"
+                  className="text-yellow-600 hover:text-yellow-700 font-semibold font-body underline"
                 >
                   Franchise Enquiry Form
                 </Link>{" "}
@@ -239,7 +239,7 @@ const ContactUs = () => {
               </p>
               <Link
                 to="/#inquiry"
-                className="inline-block bg-orange-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-orange-600 transition-colors duration-300 shadow-lg hover:shadow-xl"
+                className="inline-block bg-yellow-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-yellow-600 transition-colors duration-300 shadow-lg hover:shadow-xl"
               >
                 Contact Us
               </Link>
@@ -252,11 +252,11 @@ const ContactUs = () => {
       <section className="py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <div className="w-24 h-1 bg-orange-500 mx-auto mb-8"></div>
+            <div className="w-24 h-1 bg-yellow-500 mx-auto mb-8"></div>
           </div>
 
           <div className="max-w-3xl mx-auto">
-            <div className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-lg shadow-lg p-8">
+            <div className="bg-gradient-to-br from-gray-50 to-yellow-50 rounded-lg shadow-lg p-8">
               <h2 className="text-3xl font-bold font-heading mb-4 text-gray-800">
                 Customer Feedback
               </h2>
@@ -304,7 +304,7 @@ const ContactUs = () => {
                     onChange={(e) =>
                       setFeedbackForm({ ...feedbackForm, name: e.target.value })
                     }
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
                     placeholder="Enter your name"
                   />
                 </div>
@@ -326,7 +326,7 @@ const ContactUs = () => {
                         email: e.target.value,
                       })
                     }
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
                     placeholder="Enter your email"
                   />
                 </div>
@@ -348,7 +348,7 @@ const ContactUs = () => {
                       })
                     }
                     rows="5"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
                     placeholder="Share your thoughts, feedback, or suggestions..."
                     required
                   ></textarea>
@@ -356,7 +356,7 @@ const ContactUs = () => {
 
                 <button
                   type="submit"
-                  className="w-full bg-orange-500 text-white py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors duration-300 shadow-lg hover:shadow-xl"
+                  className="w-full bg-yellow-500 text-white py-3 rounded-lg font-semibold hover:bg-yellow-600 transition-colors duration-300 shadow-lg hover:shadow-xl"
                 >
                   Contact Us
                 </button>
@@ -370,7 +370,7 @@ const ContactUs = () => {
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <div className="w-24 h-1 bg-orange-500 mx-auto mb-8"></div>
+            <div className="w-24 h-1 bg-yellow-500 mx-auto mb-8"></div>
           </div>
 
           <div className="max-w-3xl mx-auto">
@@ -422,7 +422,7 @@ const ContactUs = () => {
                         name: e.target.value,
                       })
                     }
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
                     placeholder="Enter your name"
                     required
                   />
@@ -445,7 +445,7 @@ const ContactUs = () => {
                         email: e.target.value,
                       })
                     }
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
                     placeholder="Enter your email"
                     required
                   />
@@ -468,7 +468,7 @@ const ContactUs = () => {
                         company: e.target.value,
                       })
                     }
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
                     placeholder="Enter company name"
                   />
                 </div>
@@ -490,7 +490,7 @@ const ContactUs = () => {
                       })
                     }
                     rows="5"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
                     placeholder="Describe your collaboration proposal..."
                     required
                   ></textarea>
@@ -498,7 +498,7 @@ const ContactUs = () => {
 
                 <button
                   type="submit"
-                  className="w-full bg-orange-500 text-white py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors duration-300 shadow-lg hover:shadow-xl"
+                  className="w-full bg-yellow-500 text-white py-3 rounded-lg font-semibold hover:bg-yellow-600 transition-colors duration-300 shadow-lg hover:shadow-xl"
                 >
                   Contact Us
                 </button>

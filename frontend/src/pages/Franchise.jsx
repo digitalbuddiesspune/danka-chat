@@ -16,7 +16,7 @@ const Franchise = () => {
       icon: "🍽️",
       title: "Authentic Street Food. Modern Experience.",
       description: "We've reimagined India's favorite roadside snacks in a clean, stylish, and fun environment — without losing the traditional taste everyone loves.",
-      gradient: "from-orange-400 to-pink-500"
+      gradient: "from-gray-400 to-yellow-500"
     },
     {
       icon: "📈",
@@ -40,26 +40,26 @@ const Franchise = () => {
       icon: "⭐",
       title: "Consistent Quality & Taste",
       description: "We use standardized recipes and high-quality ingredients to ensure every puri pops with authentic Danka flavor.",
-      gradient: "from-yellow-400 to-orange-500"
+      gradient: "from-yellow-400 to-yellow-600"
     }
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-orange-50 to-yellow-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-gray-50 to-yellow-50">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 z-0">
           <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat blur-sm"
             style={{
               backgroundImage: "url('https://res.cloudinary.com/dtaitsw4r/image/upload/v1765268458/PaniPuri1_vjb1bn.jpg')",
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-orange-900/10 via-orange-800/40 to-amber-900/45" />
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900/10 via-gray-800/40 to-yellow-900/45" />
           <div className="absolute inset-0">
             <div className="absolute top-0 left-0 w-72 h-72 bg-yellow-500/20 rounded-full blur-3xl animate-pulse" />
-            <div className="absolute bottom-0 right-0 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
+            <div className="absolute bottom-0 right-0 w-96 h-96 bg-gray-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
           </div>
         </div>
 
@@ -80,7 +80,7 @@ const Franchise = () => {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 text-white leading-tight font-heading">
             Bring India's
             <br />
-            <span className="bg-gradient-to-r from-yellow-300 via-yellow-200 to-yellow-300 text-transparent bg-clip-text animate-pulse">
+            <span className="bg-gradient-to-r from-yellow-300 via-yellow-200 to-yellow-300 text-transparent bg-clip-text ">
               Favourite Street Flavours
             </span>
             <br />
@@ -146,20 +146,20 @@ const Franchise = () => {
 
       {/* Why Partner Section */}
       <section id="learn-more" className="py-24 px-4 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-white via-orange-50/30 to-yellow-50/30" />
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50/30 to-yellow-50/30" />
         
         <div className="max-w-7xl mx-auto relative z-10">
           {/* Section Header */}
           <div className="text-center mb-20">
             <div className="inline-block mb-4">
-              <span className="text-orange-600 font-bold text-xs uppercase tracking-wider bg-orange-100 px-4 py-2 rounded-full font-body">
+              <span className="text-gray-700 font-bold text-xs uppercase tracking-wider bg-yellow-100 px-4 py-2 rounded-full font-body">
                 Partnership Benefits
               </span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-black mb-6 bg-gradient-to-r from-orange-600 via-orange-500 to-yellow-500 text-transparent bg-clip-text font-heading">
+            <h2 className="text-3xl md:text-4xl font-black mb-6 bg-gradient-to-r from-gray-700 via-gray-600 to-yellow-500 text-transparent bg-clip-text font-heading">
               Why Partner with Danka
             </h2>
-            <div className="w-24 h-2 bg-gradient-to-r from-orange-500 to-yellow-500 mx-auto rounded-full" />
+            <div className="w-24 h-2 bg-gradient-to-r from-gray-500 to-yellow-500 mx-auto rounded-full" />
           </div>
 
           {/* Benefits Grid */}
@@ -181,7 +181,7 @@ const Franchise = () => {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold mb-4 text-gray-900 group-hover:text-orange-600 transition-colors duration-300 font-heading">
+                <h3 className="text-xl font-bold mb-4 text-gray-900 group-hover:text-yellow-600 transition-colors duration-300 font-heading">
                   {benefit.title}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed font-body">
@@ -189,7 +189,7 @@ const Franchise = () => {
                 </p>
 
                 {/* Decorative Corner */}
-                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-orange-100 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-yellow-100 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
             ))}
           </div>
@@ -199,7 +199,7 @@ const Franchise = () => {
       {/* What You Get Section */}
       <section className="py-24 px-4 relative overflow-hidden text-white" style={{ background: 'linear-gradient(to bottom, #000000, #1a0e06, #2b1205)' }}>
         {/* Decorative Elements */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gray-500/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-yellow-500/10 rounded-full blur-3xl" />
 
         <div className="max-w-7xl mx-auto relative z-10">
@@ -221,7 +221,7 @@ const Franchise = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Training & Support Card */}
             <div className="group relative bg-white/5 backdrop-blur-xl rounded-3xl p-10 border border-white/10 hover:border-white/30 transition-all duration-500 hover:bg-white/10">
-              <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-br from-gray-500/10 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               <div className="relative z-10">
                 <div className="flex items-center gap-4 mb-8">
@@ -310,7 +310,7 @@ const Franchise = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a
               href="/#inquiry"
-              className="group px-10 py-6 bg-white text-orange-600 rounded-2xl font-bold text-lg shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 hover:-translate-y-1 flex items-center justify-center gap-3 font-body"
+              className="group px-10 py-6 bg-white text-yellow-600 rounded-2xl font-bold text-lg shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 hover:-translate-y-1 flex items-center justify-center gap-3 font-body"
             >
               Fill Inquiry Form
               <svg className="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -50,7 +50,7 @@ const HappinessCard = () => {
   };
 
   return (
-    <div className="w-full bg-gradient-to-b from-white to-orange-50">
+    <div className="w-full bg-gradient-to-b from-white to-yellow-50">
       <div className="w-full max-w-7xl mx-auto lg:h-screen   overflow-hidden">
         <div className="flex flex-col items-center justify-center px-4 py-12 lg:py-24">
           <div>
