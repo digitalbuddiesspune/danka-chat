@@ -5,28 +5,28 @@ const OurOffering = () => {
   const franchiseCards = [
     {
       id: 1,
-      name: "Premium Chat Center",
-      description: "Full-service chat center with complete menu and seating area",
+      name: "Premium Chaat Center",
+      description: "Full-service chaat center with complete menu and seating area",
       features: ["Full Menu", "Seating Area", "Premium Location", "Marketing Support"],
       investment: "Starting from ₹5 Lakhs"
     },
     {
       id: 2,
-      name: "Standard Chat Center",
-      description: "Compact chat center perfect for high-traffic areas",
+      name: "Standard Chaat Center",
+      description: "Compact chaat center perfect for high-traffic areas",
       features: ["Popular Items", "Takeaway Focus", "Prime Location", "Training Provided"],
       investment: "Starting from ₹3 Lakhs"
     },
     {
       id: 3,
-      name: "Express Chat Center",
+      name: "Express Chaat Center",
       description: "Quick-service kiosk for malls and food courts",
       features: ["Quick Service", "Limited Menu", "High Volume", "Low Investment"],
       investment: "Starting from ₹2 Lakhs"
     },
     {
       id: 4,
-      name: "Mobile Chat Cart",
+      name: "Mobile Chaat Cart",
       description: "Portable cart for events and festivals",
       features: ["Portable", "Event Ready", "Flexible Location", "Low Maintenance"],
       investment: "Starting from ₹1.5 Lakhs"

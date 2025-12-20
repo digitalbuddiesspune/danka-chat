@@ -52,7 +52,7 @@ const AboutUs = () => {
       year: "2021",
       title: "First Location",
       description:
-        "Opened our first chat center, serving fresh Panipuri and Chaat to delighted customers",
+        "Opened our first chaat center, serving fresh Panipuri and Chaat to delighted customers",
     },
     {
       year: "2022",

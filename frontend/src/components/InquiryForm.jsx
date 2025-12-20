@@ -14,10 +14,10 @@ const InquiryForm = () => {
   const [submitSuccess, setSubmitSuccess] = useState(false)
 
   const franchiseOptions = [
-    'Premium Chat Center',
-    'Standard Chat Center',
-    'Express Chat Center',
-    'Mobile Chat Cart'
+    'Premium Chaat Center',
+    'Standard Chaat Center',
+    'Express Chaat Center',
+    'Mobile Chaat Cart'
   ]
 
   const handleChange = (e) => {
