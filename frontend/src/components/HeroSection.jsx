@@ -1,8 +1,21 @@
-import React from "react";
-import { motion } from "framer-motion";
-import heroBanner from "../assets/newBanner.jpeg";
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import newBanner from "../assets/newBanner.jpeg";
+import edit2 from "../assets/edit2.jpeg";
 
 const HeroSection = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const images = [newBanner, edit2];
+
+  // Switch images every 10 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % images.length);
+    }, 10000);
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   // Generate random droplet positions
   const droplets = Array.from({ length: 15 }, (_, i) => ({
     id: i,
@@ -16,11 +29,17 @@ const HeroSection = () => {
     <section className="relative w-full h-screen overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img
-          src={heroBanner}
-          alt="Danka Chaat Hero Banner"
-          className="w-full h-full object-cover"
-        />
+        {images.map((image, index) => (
+          <motion.img
+            key={index}
+            src={image}
+            alt="Danka Chaat Hero Banner"
+            className="absolute inset-0 w-full h-full object-cover"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: index === currentImageIndex ? 1 : 0 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+          />
+        ))}
       </div>
 
       {/* Dark Overlay */}

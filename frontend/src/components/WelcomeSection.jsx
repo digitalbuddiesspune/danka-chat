@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import newBanner from "../assets/newBanner.jpeg";
+
 
 const WelcomeSection = () => {
   const fadeIn = {
