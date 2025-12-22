@@ -1,7 +1,29 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React, { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 const OurRestaurant = () => {
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [itemsPerView, setItemsPerView] = useState(4)
+
+  // Calculate items per view based on screen size
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        setItemsPerView(1)
+      } else if (window.innerWidth < 1024) {
+        setItemsPerView(2)
+      } else if (window.innerWidth < 1280) {
+        setItemsPerView(3)
+      } else {
+        setItemsPerView(4)
+      }
+    }
+
+    handleResize()
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
   const franchiseLocations = [
     {
       id: 1,
@@ -127,6 +149,20 @@ const OurRestaurant = () => {
     }
   }
 
+  const maxIndex = Math.max(0, franchiseLocations.length - itemsPerView)
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1))
+  }
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1))
+  }
+
+  const goToSlide = (index) => {
+    setCurrentIndex(index)
+  }
+
   return (
     <section className="py-16 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
@@ -143,33 +179,107 @@ const OurRestaurant = () => {
           </p>
         </motion.div>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-        >
-          {franchiseLocations.map((location) => (
+        <div className="relative">
+          {/* Carousel Container */}
+          <div className="relative overflow-hidden">
             <motion.div
-              key={location.id}
-              variants={cardVariants}
-              whileHover={{ scale: 1.05, y: -10 }}
-              className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
+              className="flex gap-6"
+              animate={{
+                x: `-${currentIndex * (100 / itemsPerView)}%`
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 300,
+                damping: 30
+              }}
             >
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src={location.image}
-                  alt={location.name}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute top-2 right-2 bg-yellow-500 text-gray-900 px-3 py-1 rounded-full text-sm font-semibold">
-                  {location.type}
-                </div>
-              </div>
+              {franchiseLocations.map((location) => (
+                <motion.div
+                  key={location.id}
+                  variants={cardVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  className="bg-white rounded-lg shadow-lg overflow-hidden flex-shrink-0"
+                  style={{ width: `calc(${100 / itemsPerView}% - ${(itemsPerView - 1) * 24 / itemsPerView}px)` }}
+                >
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={location.image}
+                      alt={location.name}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute top-2 right-2 bg-yellow-500 text-gray-900 px-3 py-1 rounded-full text-sm font-semibold">
+                      {location.type}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
             </motion.div>
-          ))}
-        </motion.div>
+          </div>
+
+          {/* Navigation Buttons */}
+          {franchiseLocations.length > itemsPerView && (
+            <>
+              <button
+                onClick={prevSlide}
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-3 shadow-lg hover:bg-yellow-500 hover:text-white transition-all duration-300 z-10"
+                aria-label="Previous slide"
+              >
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+              <button
+                onClick={nextSlide}
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-3 shadow-lg hover:bg-yellow-500 hover:text-white transition-all duration-300 z-10"
+                aria-label="Next slide"
+              >
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+            </>
+          )}
+
+          {/* Carousel Indicators */}
+          {franchiseLocations.length > itemsPerView && (
+            <div className="flex justify-center gap-2 mt-8">
+              {Array.from({ length: maxIndex + 1 }).map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    currentIndex === index
+                      ? 'bg-yellow-500 w-8'
+                      : 'bg-gray-300 w-2 hover:bg-gray-400'
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
+          )}
+        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}

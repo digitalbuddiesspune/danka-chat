@@ -81,10 +81,10 @@ const HeroSection = () => {
             className="mb-6"
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-4 leading-tight">
-              Where Every Bite is a
+              You Love Panipuri, And
               <br />
               <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">
-                Burst of Flavor!
+                We Love To Serve You!
               </span>
             </h1>
           </motion.div>
@@ -95,9 +95,25 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed font-medium"
           >
-            Forget basic street food. Danka serves the{" "}
-            <span className="font-bold text-yellow-400">tangiest, crunchiest</span> Panipuri made with RO water and pure love.
+            We are on the way to serve the best panipuri and chaat. By offering
+            the
+            <span className="font-bold text-yellow-400"> Danka Franchise.</span>
           </motion.p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center pt-5">
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              href="https://wa.me/917887882300"
+              className=" text-white px-4 py-2 bg-transparent border-bg-green-500 border-1 hover:bg-green-500  hover:text-white rounded-2xl font-bold text-base md:text-lg flex items-center justify-center gap-3 transition-colors shadow-xl shadow-green-900/20"
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                className="w-6 h-6"
+                alt="WA"
+              />
+              WhatsApp Us
+            </motion.a>
+          </div>
         </div>
       </div>
     </section>
@@ -105,4 +121,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-

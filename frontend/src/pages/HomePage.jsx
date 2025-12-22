@@ -17,7 +17,7 @@ const HomePage = () => {
       <DishesCarousel />
       <HappinessCard />
       <OurRestaurant />
-      <OurOffering/>
+      {/* <OurOffering/> */}
       <ReviewsSlider />
       <InquiryForm />
     </div>

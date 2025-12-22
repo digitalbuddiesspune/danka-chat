@@ -347,7 +347,7 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
+      {/* Why Choose Us Section
       <section className="py-16 px-4 text-white" style={{ background: 'linear-gradient(to bottom, #000000, #1a0e06, #2b1205)' }}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
@@ -384,7 +384,7 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Call to Action */}
       <section className="py-16 px-4 text-white" 

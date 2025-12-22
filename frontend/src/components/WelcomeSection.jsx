@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-
 const WelcomeSection = () => {
   const fadeIn = {
     initial: { opacity: 0, y: 30 },
@@ -198,27 +197,12 @@ const WelcomeSection = () => {
           <div className="absolute bottom-0 right-0 w-32 h-32 bg-orange-500/10 rounded-full blur-3xl" />
 
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-white mb-6">
-            Ready for a Flavor Blast?
+            Where Every Bite is a Burst of Flavor!
           </h2>
           <p className="text-gray-400 mb-10 text-base md:text-lg">
-            Hygiene & Quality is our top priority. Visit our central kitchen!
+            Forget basic street food. Danka serves the tangiest, crunchiest
+            Panipuri made with RO water and pure love.
           </p>
-
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              href="https://wa.me/917887882300"
-              className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-2xl font-bold text-base md:text-lg flex items-center justify-center gap-3 transition-colors shadow-xl shadow-green-900/20"
-            >
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-                className="w-6 h-6"
-                alt="WA"
-              />
-              WhatsApp Us
-            </motion.a>
-          </div>
         </motion.div>
       </div>
     </section>
