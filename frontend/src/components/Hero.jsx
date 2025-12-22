@@ -3,6 +3,8 @@ import banner1 from "../assets/banner1.png";
 import banner2 from "../assets/banner2.png";
 import mobilebanner1 from "../assets/mobilebanner1.png";
 import mobilebanner2 from "../assets/mobilebanner2.png";
+import newBanner from "../assets/newBanner.jpeg";
+
 
 
 export default function Hero() {
@@ -26,7 +28,7 @@ export default function Hero() {
     const interval = setInterval(() => {
       setFade(true);
       setTimeout(() => {
-        setBanner((prev) => (prev === banner1 ? banner2 : banner1));
+        setBanner((prev) => (prev === newBanner ? banner2 : newBanner));
         setFade(false);
       }, 350);
     }, 5000);

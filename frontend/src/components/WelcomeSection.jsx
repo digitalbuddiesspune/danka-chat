@@ -1,25 +1,26 @@
 import React from "react";
 import { motion } from "framer-motion";
+import newBanner from "../assets/newBanner.jpeg";
 
 const WelcomeSection = () => {
   const fadeIn = {
     initial: { opacity: 0, y: 30 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true },
-    transition: { duration: 0.8, ease: "easeOut" }
+    transition: { duration: 0.8, ease: "easeOut" },
   };
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.2 }
-    }
+      transition: { staggerChildren: 0.2 },
+    },
   };
 
   const itemVariants = {
     hidden: { opacity: 0, scale: 0.9 },
-    visible: { opacity: 1, scale: 1 }
+    visible: { opacity: 1, scale: 1 },
   };
 
   return (
@@ -38,14 +39,14 @@ const WelcomeSection = () => {
           transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
           className="absolute -bottom-20 -right-20 w-[600px] h-[600px] bg-orange-200/20 rounded-full blur-[120px]"
         />
-        
+
         {/* Floating "Puri" shapes */}
         {[...Array(5)].map((_, i) => (
           <motion.div
             key={i}
-            animate={{ 
+            animate={{
               y: [0, -40, 0],
-              opacity: [0.2, 0.4, 0.2] 
+              opacity: [0.2, 0.4, 0.2],
             }}
             transition={{ duration: 4 + i, repeat: Infinity, delay: i }}
             className="absolute hidden md:block border-2 border-yellow-400/20 rounded-full"
@@ -68,39 +69,39 @@ const WelcomeSection = () => {
             </span>
           </motion.div>
 
-          <motion.h1 
+          <motion.h1
             {...fadeIn}
             transition={{ delay: 0.2 }}
-            className="text-3xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight mb-8"
+            className="text-center text-xl md:text-2xl lg:text-3xl font-black text-gray-900 tracking-tight mb-4 lg:mb-8 font-poppins"
           >
-            Where Every Bite is a <br />
+            At Danka, every crunch of Panipuri and every spoonful of Chaat
+            brings the dhamaka of authentic Indian flavors. We’ve taken the
+            magic of the streets and wrapped it in freshness, hygiene, and
+            happiness — so every bite feels like
             <span className="relative">
               <span className="relative z-10 bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">
-                Burst of Flavor!
+                “Wah! Kya Swad Hai!”
               </span>
-              <motion.svg 
+              <motion.svg
                 initial={{ width: 0 }}
                 whileInView={{ width: "100%" }}
-                className="absolute -bottom-2 left-0 h-3 text-yellow-200 -z-10" 
-                viewBox="0 0 100 10" 
+                className="absolute -bottom-2 left-0 h-3 text-yellow-200 -z-10"
+                viewBox="0 0 100 10"
                 preserveAspectRatio="none"
               >
-                <path d="M0 5 Q 25 0 50 5 T 100 5" stroke="currentColor" strokeWidth="8" fill="transparent" />
+                <path
+                  d="M0 5 Q 25 0 50 5 T 100 5"
+                  stroke="currentColor"
+                  strokeWidth="8"
+                  fill="transparent"
+                />
               </motion.svg>
             </span>
           </motion.h1>
-
-          <motion.p 
-            {...fadeIn}
-            transition={{ delay: 0.3 }}
-            className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto font-medium leading-relaxed"
-          >
-            Forget basic street food. Danka serves the <span className="text-gray-900  decoration-yellow-400 decoration-4">tangiest, crunchiest</span> Panipuri made with RO water and pure love.
-          </motion.p>
         </div>
 
         {/* --- BENTO PROMISE GRID --- */}
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -108,19 +109,40 @@ const WelcomeSection = () => {
           className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20"
         >
           {/* Main Card */}
-          <motion.div 
+          <motion.div
             variants={itemVariants}
             className="md:col-span-2 bg-white p-10 rounded-[2.5rem] shadow-sm border border-gray-100 flex flex-col justify-center relative overflow-hidden group"
           >
             <div className="relative z-10">
-              <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-6">Our Promise</h2>
+              <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-6">
+                Our Promise
+              </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {["Authentic Flavors", "Hygienic Kitchen", "Refined Oil Only", "RO Purified Water"].map((text) => (
+                {[
+                  "Authentic Flavors",
+                  "Hygienic Kitchen",
+                  "Refined Oil Only",
+                  "RO Purified Water",
+                ].map((text) => (
                   <div key={text} className="flex items-center gap-3">
                     <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center text-green-600">
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg>
+                      <svg
+                        className="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="3"
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
                     </div>
-                    <span className="font-semibold text-sm md:text-base text-gray-700">{text}</span>
+                    <span className="font-semibold text-sm md:text-base text-gray-700">
+                      {text}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -129,20 +151,28 @@ const WelcomeSection = () => {
           </motion.div>
 
           {/* Experience Card */}
-          <motion.div 
+          <motion.div
             variants={itemVariants}
             className="bg-yellow-400 p-10 rounded-[2.5rem] flex flex-col justify-center items-center text-center shadow-xl shadow-yellow-200"
           >
             <span className="text-4xl mb-4">💥</span>
-            <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-2">DHAMAKA</h3>
-            <p className="font-semibold text-sm md:text-base text-yellow-900">Every bite feels like 'Wah! Kya Swad Hai!'</p>
+            <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-2">
+              DHAMAKA
+            </h3>
+            <p className="font-semibold text-sm md:text-base text-yellow-900">
+              Every bite feels like 'Wah! Kya Swad Hai!'
+            </p>
           </motion.div>
         </motion.div>
 
         {/* --- WHY DANKA PILLS --- */}
         <div className="flex flex-wrap justify-center gap-4 mb-24">
           {[
-            "100% Fresh", "Street-Style", "Premium Oil", "Hygiene First", "Fast Service"
+            "100% Fresh",
+            "Street-Style",
+            "Premium Oil",
+            "Hygiene First",
+            "Fast Service",
           ].map((item, i) => (
             <motion.span
               key={item}
@@ -158,7 +188,7 @@ const WelcomeSection = () => {
         </div>
 
         {/* --- CTA SECTION --- */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           className="relative bg-gray-900 rounded-[3rem] p-12 overflow-hidden text-center"
@@ -167,8 +197,12 @@ const WelcomeSection = () => {
           <div className="absolute top-0 left-0 w-32 h-32 bg-yellow-500/10 rounded-full blur-3xl" />
           <div className="absolute bottom-0 right-0 w-32 h-32 bg-orange-500/10 rounded-full blur-3xl" />
 
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-white mb-6">Ready for a Flavor Blast?</h2>
-          <p className="text-gray-400 mb-10 text-base md:text-lg">Hygiene & Quality is our top priority. Visit our central kitchen!</p>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-white mb-6">
+            Ready for a Flavor Blast?
+          </h2>
+          <p className="text-gray-400 mb-10 text-base md:text-lg">
+            Hygiene & Quality is our top priority. Visit our central kitchen!
+          </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <motion.a
@@ -177,10 +211,13 @@ const WelcomeSection = () => {
               href="https://wa.me/917887882300"
               className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-2xl font-bold text-base md:text-lg flex items-center justify-center gap-3 transition-colors shadow-xl shadow-green-900/20"
             >
-              <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" className="w-6 h-6" alt="WA" />
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                className="w-6 h-6"
+                alt="WA"
+              />
               WhatsApp Us
             </motion.a>
-           
           </div>
         </motion.div>
       </div>

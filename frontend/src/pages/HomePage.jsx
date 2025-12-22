@@ -6,11 +6,13 @@ import OurOffering from '../components/OurOffering'
 import InquiryForm from '../components/InquiryForm'
 import OurRestaurant from '../components/OurRestaurant'
 import ReviewsSlider from '../components/ReviewsSlider'
+import HeroSection from '../components/HeroSection'
 
 const HomePage = () => {
   return (
     <div>
-      <Hero/>
+      {/* <Hero/> */}
+      <HeroSection />
       <WelcomeSection />
       <DishesCarousel />
       <HappinessCard />
