@@ -222,7 +222,7 @@ const InquiryForm = () => {
               disabled={isSubmitting}
               whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
               whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
-              className="w-full bg-yellow-500 text-gray-900 py-3 rounded-lg font-semibold hover:bg-yellow-600 transition-colors duration-300 disabled:bg-gray-400 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
+              className="w-full bg-yellow-500 text-gray-900 py-3 rounded-lg font-semibold font-body hover:bg-yellow-600 transition-colors duration-300 disabled:bg-gray-400 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
             >
               {isSubmitting ? 'Submitting...' : 'Contact Us'}
             </motion.button>

@@ -42,16 +42,16 @@ const Footer = () => {
                 />
               </div>
               <div>
-                <h2 className="text-2xl sm:text-3xl font-bold text-yellow-400">
+                <h2 className="text-2xl sm:text-3xl font-bold font-heading text-yellow-400">
                   Danka
                 </h2>
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-400 text-sm font-body">
                   For Panipuri & Chaat Lovers
                 </p>
               </div>
             </div>
 
-            <p className="text-gray-300 mb-6 leading-relaxed">
+            <p className="text-gray-300 mb-6 leading-relaxed font-body">
               Experience authentic street food flavors with a modern twist.
               Bringing joy, one panipuri at a time.
             </p>
@@ -111,9 +111,9 @@ const Footer = () => {
                   d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                 />
               </svg>
-              <h3 className="text-lg font-bold">Stay Updated</h3>
+              <h3 className="text-lg font-bold font-heading">Stay Updated</h3>
             </div>
-            <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+            <p className="text-gray-300 mb-4 text-sm leading-relaxed font-body">
               Get the latest news, special offers, and delicious updates
               delivered to your inbox.
             </p>
@@ -129,7 +129,7 @@ const Footer = () => {
               </div>
               <button
                 onClick={handleSubscribe}
-                className="w-full bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold px-6 py-3 rounded-xl transition-all duration-300 shadow-lg shadow-yellow-500/25 hover:shadow-xl hover:shadow-yellow-500/40 hover:scale-[1.02] text-sm"
+                className="w-full bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold font-body px-6 py-3 rounded-xl transition-all duration-300 shadow-lg shadow-yellow-500/25 hover:shadow-xl hover:shadow-yellow-500/40 hover:scale-[1.02] text-sm"
               >
                 Subscribe Now
               </button>
@@ -149,7 +149,7 @@ const Footer = () => {
                     d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </svg>
-                <p className="text-yellow-400 text-sm font-medium">
+                <p className="text-yellow-400 text-sm font-medium font-body">
                   Successfully subscribed!
                 </p>
               </div>
@@ -160,14 +160,15 @@ const Footer = () => {
           <div className="lg:col-span-3 grid grid-cols-2 gap-8">
             {/* Getting Started */}
             <div>
-              <h4 className="text-yellow-400 font-bold mb-4 text-sm uppercase tracking-wider">
+              <h4 className="text-yellow-400 font-bold font-heading mb-4 text-sm uppercase tracking-wider">
                 Explore
               </h4>
               <ul className="space-y-2.5">
                 {[
                   { to: "/", label: "Home" },
-                  { to: "/about-us", label: "About Us" },
                   { to: "/franchise", label: "Franchise" },
+                  { to: "/about-us", label: "About Us" },
+                
                   { to: "/contact-us", label: "Contact" },
                 ].map((link, i) => (
                   <li key={i}>
@@ -175,7 +176,7 @@ const Footer = () => {
                       <a
                         href={link.to}
                         onClick={(e) => handleLinkClick(e, link.to)}
-                        className="text-gray-300 hover:text-yellow-400 transition-colors text-sm flex items-center gap-2 group cursor-pointer"
+                        className="text-gray-300 hover:text-yellow-400 transition-colors text-sm font-body flex items-center gap-2 group cursor-pointer"
                       >
                         <span className="w-1.5 h-1.5 rounded-full bg-gray-600 group-hover:bg-yellow-400 transition-colors"></span>
                         {link.label}
@@ -184,7 +185,7 @@ const Footer = () => {
                       <Link
                         to={link.to}
                         onClick={(e) => handleLinkClick(e, link.to)}
-                        className="text-gray-300 hover:text-yellow-400 transition-colors text-sm flex items-center gap-2 group cursor-pointer"
+                        className="text-gray-300 hover:text-yellow-400 transition-colors text-sm font-body flex items-center gap-2 group cursor-pointer"
                       >
                         <span className="w-1.5 h-1.5 rounded-full bg-gray-600 group-hover:bg-yellow-400 transition-colors"></span>
                         {link.label}
@@ -197,7 +198,7 @@ const Footer = () => {
 
             {/* Legal */}
             <div>
-              <h4 className="text-yellow-400 font-bold mb-4 text-sm uppercase tracking-wider">
+              <h4 className="text-yellow-400 font-bold font-heading mb-4 text-sm uppercase tracking-wider">
                 Legal
               </h4>
               <ul className="space-y-2.5">
@@ -211,7 +212,7 @@ const Footer = () => {
                     <Link
                       to={link.to}
                       onClick={(e) => handleLinkClick(e, link.to)}
-                      className="text-gray-300 hover:text-yellow-400 transition-colors text-sm flex items-center gap-2 group cursor-pointer"
+                      className="text-gray-300 hover:text-yellow-400 transition-colors text-sm font-body flex items-center gap-2 group cursor-pointer"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-gray-600 group-hover:bg-yellow-400 transition-colors"></span>
                       {link.label}
@@ -228,12 +229,12 @@ const Footer = () => {
       <div className="relative border-t border-gray-800/50 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-            <div className="text-gray-400 flex items-center gap-2">
+            <div className="text-gray-400 flex items-center gap-2 font-body">
               <span>© {currentYear} Danka.</span>
-              <span className="hidden sm:inline">All rights reserved.</span>
+              <span className=" sm:inline">All rights reserved.</span>
             </div>
 
-            <div className="flex items-center gap-1 text-gray-500">
+            <div className="flex items-center gap-1 text-gray-500 font-body">
               <span>Made with</span>
               <svg
                 className="w-4 h-4 text-red-500 animate-pulse"
@@ -249,7 +250,7 @@ const Footer = () => {
               <span>in India</span>
             </div>
 
-            <div className="flex gap-4 text-xs">
+            <div className="flex gap-4 text-xs font-body">
               <Link
                 to="/terms"
                 onClick={(e) => handleLinkClick(e, "/terms")}

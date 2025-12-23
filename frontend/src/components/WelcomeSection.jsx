@@ -63,7 +63,7 @@ const WelcomeSection = () => {
         {/* --- HERO HEADER --- */}
         <div className="text-center mb-24">
           <motion.div {...fadeIn} className="inline-block">
-            <span className="px-5 py-2 rounded-full bg-black text-yellow-400 text-xs font-black uppercase tracking-[0.2em] mb-6 inline-block">
+            <span className="px-5 py-2 rounded-full bg-black text-yellow-400 text-xs font-body uppercase tracking-[0.2em] mb-6 inline-block">
               The Ultimate Chaat Experience
             </span>
           </motion.div>
@@ -71,31 +71,20 @@ const WelcomeSection = () => {
           <motion.h1
             {...fadeIn}
             transition={{ delay: 0.2 }}
-            className="text-center text-xl md:text-2xl lg:text-3xl font-black text-gray-900 tracking-tight mb-4 lg:mb-8 font-poppins"
+            className="text-center text-xl md:text-2xl lg:text-2xl  text-gray-900 tracking-tight mb-4 font-heading"
           >
-            At Danka, every crunch of Panipuri and every spoonful of Chaat
-            brings the dhamaka of authentic Indian flavors. We’ve taken the
-            magic of the streets and wrapped it in freshness, hygiene, and
-            happiness — so every bite feels like
             <span className="relative">
-              <span className="relative z-10 bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">
-                “Wah! Kya Swad Hai!”
+              <span className="relative font-bold text-xl lg:text-3xl z-10 bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">
+                Welcome to Danka – Where Every Bite is a Burst of Flavor
               </span>
-              <motion.svg
-                initial={{ width: 0 }}
-                whileInView={{ width: "100%" }}
-                className="absolute -bottom-2 left-0 h-3 text-yellow-200 -z-10"
-                viewBox="0 0 100 10"
-                preserveAspectRatio="none"
-              >
-                <path
-                  d="M0 5 Q 25 0 50 5 T 100 5"
-                  stroke="currentColor"
-                  strokeWidth="8"
-                  fill="transparent"
-                />
-              </motion.svg>
+            
             </span>
+            <p className="font-body font-semibold  text-gray-700">
+              Get ready to experience the tangiest, crunchiest, and most
+              irresistible Panipuri and Chaat in town. At Danka, we bring the
+              true taste of Indian street food to your plate — fresh, hygienic,
+              and made with love.
+            </p>
           </motion.h1>
         </div>
 
@@ -113,7 +102,7 @@ const WelcomeSection = () => {
             className="md:col-span-2 bg-white p-10 rounded-[2.5rem] shadow-sm border border-gray-100 flex flex-col justify-center relative overflow-hidden group"
           >
             <div className="relative z-10">
-              <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-6">
+              <h2 className="text-2xl md:text-3xl font-heading text-gray-900 mb-6">
                 Our Promise
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -139,7 +128,7 @@ const WelcomeSection = () => {
                         />
                       </svg>
                     </div>
-                    <span className="font-semibold text-sm md:text-base text-gray-700">
+                    <span className="font-semibold text-sm md:text-base font-body text-gray-700">
                       {text}
                     </span>
                   </div>
@@ -155,15 +144,14 @@ const WelcomeSection = () => {
             className="bg-yellow-400 p-10 rounded-[2.5rem] flex flex-col justify-center items-center text-center shadow-xl shadow-yellow-200"
           >
             <span className="text-4xl mb-4">💥</span>
-            <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-2">
+            <h3 className="text-xl md:text-2xl font-heading text-gray-900 mb-2">
               DHAMAKA
             </h3>
-            <p className="font-semibold text-sm md:text-base text-yellow-900">
+            <p className="font-semibold text-sm md:text-base font-body text-yellow-900">
               Every bite feels like 'Wah! Kya Swad Hai!'
             </p>
           </motion.div>
         </motion.div>
-        
 
         {/* --- WHY DANKA PILLS --- */}
         {/* <div className="flex flex-wrap justify-center gap-4 mb-24">
@@ -191,19 +179,17 @@ const WelcomeSection = () => {
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="relative bg-gray-900 rounded-[3rem] p-12 overflow-hidden text-center"
+          className="relative bg-gray-900 rounded-[3rem] px-4 py-8 lg:p-12 overflow-hidden "
         >
-          {/* Decorative circles */}
-          <div className="absolute top-0 left-0 w-32 h-32 bg-yellow-500/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-0 w-32 h-32 bg-orange-500/10 rounded-full blur-3xl" />
-
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-white mb-6">
-            Where Every Bite is a Burst of Flavor!
+          <h2 className="text-xl  lg:text-2xl font-heading text-white text-center">
+            At Danka, every crunch of Panipuri and every spoonful of Chaat
+            brings the dhamaka of authentic Indian flavors. We've taken the
+            magic of the streets and wrapped it in freshness, hygiene, and
+            happiness —{" "}
+            <span className="font-semibold font-body text-yellow-200">
+              Every bite feels like 'Wah! Kya Swad Hai!'
+            </span>
           </h2>
-          <p className="text-gray-400 mb-10 text-base md:text-lg">
-            Forget basic street food. Danka serves the tangiest, crunchiest
-            Panipuri made with RO water and pure love.
-          </p>
         </motion.div>
       </div>
     </section>

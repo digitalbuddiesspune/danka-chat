@@ -11,9 +11,9 @@ const Navbar = () => {
   const hoveredItemRef = useRef(null);
 
   const navItems = [
+    { path: "/franchise", label: "Franchise", hoverText: "Join Us" },
     { path: "/about-us", label: "About Us", hoverText: "Our Story" },
     { path: "/contact-us", label: "Contact Us", hoverText: "Get in Touch" },
-    { path: "/franchise", label: "Franchise", hoverText: "Join Us" },
   ];
 
   useEffect(() => {
@@ -41,11 +41,11 @@ const Navbar = () => {
       clearInterval(intervalRef.current);
       intervalRef.current = null;
     }
-    
+
     hoveredItemRef.current = item;
     setHoveredItem(item);
     setTypedText("");
-    
+
     // Typing animation
     let currentIndex = 0;
     intervalRef.current = setInterval(() => {
@@ -55,7 +55,7 @@ const Navbar = () => {
         intervalRef.current = null;
         return;
       }
-      
+
       if (currentIndex < hoverText.length) {
         setTypedText(hoverText.slice(0, currentIndex + 1));
         currentIndex++;
@@ -87,7 +87,7 @@ const Navbar = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   };
 
@@ -97,32 +97,34 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-4 py-3 lg:px-10 transition-all duration-300 ${
-      scrolled 
-        ? "backdrop-blur-md bg-white/80 shadow-lg" 
-        : "bg-transparent"
-    }`}>
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-4 py-3 lg:px-10 transition-all duration-300 ${
+        scrolled ? "backdrop-blur-md bg-white/80 shadow-lg" : "bg-transparent"
+      }`}
+    >
       <div>
-        <NavLink 
-          to={"/"} 
-          exact="true" 
+        <NavLink
+          to={"/"}
+          exact="true"
           className="text-2xl font-bold transition-colors"
           onClick={handleNavClick}
         >
-          <img 
-            src={Logo} 
-            alt="Danka Logo" 
+          <img
+            src={Logo}
+            alt="Danka Logo"
             className={`w-16 h-16 lg:w-20 lg:h-20 transition-all duration-300 ${
               scrolled ? "" : "drop-shadow-lg"
-            }`} 
+            }`}
           />
         </NavLink>
       </div>
-      
+
       {/* Mobile Menu Icon */}
       <button
         onClick={toggleMobileMenu}
-        className={`md:hidden ${scrolled ? "text-gray-900" : "text-white"} focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded p-2 transition-colors`}
+        className={`md:hidden ${
+          scrolled ? "text-gray-900" : "text-white"
+        } focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded p-2 transition-colors`}
         aria-label="Toggle menu"
       >
         {isMobileMenuOpen ? (
@@ -170,21 +172,31 @@ const Navbar = () => {
                 to={item.path}
                 onClick={scrollToTop}
                 className={({ isActive }) =>
-                  `relative ${scrolled ? "text-gray-900" : "text-white"} font-medium transition-all duration-300 hover:text-yellow-500 ${
+                  `relative ${
+                    scrolled ? "text-gray-900" : "text-white"
+                  } font-medium transition-all duration-300 hover:text-yellow-500 ${
                     isActive ? "text-yellow-500" : ""
                   }`
                 }
               >
                 {item.label}
                 {hoveredItem === item && (
-                  <span className={`absolute left-0 top-full mt-1 text-xs ${scrolled ? "text-gray-600" : "text-yellow-300"} font-normal whitespace-nowrap`}>
+                  <span
+                    className={`absolute left-0 top-full mt-1 text-xs font-body ${
+                      scrolled ? "text-gray-600" : "text-yellow-300"
+                    } font-normal whitespace-nowrap`}
+                  >
                     {typedText}
                     <span className="animate-pulse">|</span>
                   </span>
                 )}
               </NavLink>
               {/* Hover underline effect */}
-              <span className={`absolute bottom-0 left-0 w-0 h-0.5 ${scrolled ? "bg-gray-900" : "bg-yellow-400"} transition-all duration-300 group-hover:w-full`}></span>
+              <span
+                className={`absolute bottom-0 left-0 w-0 h-0.5 ${
+                  scrolled ? "bg-gray-900" : "bg-yellow-400"
+                } transition-all duration-300 group-hover:w-full`}
+              ></span>
             </li>
           ))}
         </ul>
@@ -200,7 +212,10 @@ const Navbar = () => {
       >
         <ul className="flex flex-col py-4">
           {navItems.map((item, index) => (
-            <li key={index} className="border-b border-gray-200 last:border-b-0">
+            <li
+              key={index}
+              className="border-b border-gray-200 last:border-b-0"
+            >
               <NavLink
                 to={item.path}
                 onClick={handleNavClick}

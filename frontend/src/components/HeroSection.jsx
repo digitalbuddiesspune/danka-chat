@@ -80,7 +80,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-6"
           >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-4 leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-extrabold text-white mb-4 leading-tight">
               You Love Panipuri, And
               <br />
               <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">
@@ -93,7 +93,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed font-medium"
+            className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed font-body font-medium"
           >
             We are on the way to serve the best panipuri and chaat. By offering
             the
@@ -104,7 +104,7 @@ const HeroSection = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href="https://wa.me/917887882300"
-              className=" text-white px-4 py-2 bg-transparent border-bg-green-500 border-1 hover:bg-green-500  hover:text-white rounded-2xl font-bold text-base md:text-lg flex items-center justify-center gap-3 transition-colors shadow-xl shadow-green-900/20"
+              className=" text-white px-4 py-2 bg-transparent border-bg-green-500 border-1 hover:bg-green-500  hover:text-white rounded-2xl font-bold font-body text-base md:text-lg flex items-center justify-center gap-3 transition-colors shadow-xl shadow-green-900/20"
             >
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"

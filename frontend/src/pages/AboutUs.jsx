@@ -198,8 +198,8 @@ const AboutUs = () => {
        <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 text-gray-800">Our Mission</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold font-heading mb-4 text-gray-800">Our Mission</h2>
+            <p className="text-xl font-body text-gray-600 max-w-3xl mx-auto">
               We are committed to revolutionizing street food by combining authentic flavors with uncompromising hygiene and quality standards.
             </p>
           </div>
@@ -207,22 +207,22 @@ const AboutUs = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow-lg p-6 text-center">
               <div className="text-4xl mb-4">🎯</div>
-              <h3 className="text-xl font-bold mb-3 text-gray-800">Authentic Taste</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-bold font-heading mb-3 text-gray-800">Authentic Taste</h3>
+              <p className="text-gray-600 font-body">
                 Preserving traditional recipes while ensuring every bite delivers the authentic street food experience
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-6 text-center">
               <div className="text-4xl mb-4">🛡️</div>
-              <h3 className="text-xl font-bold mb-3 text-gray-800">Hygiene First</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-bold font-heading mb-3 text-gray-800">Hygiene First</h3>
+              <p className="text-gray-600 font-body">
                 Maintaining the highest standards of cleanliness and food safety in every preparation
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-6 text-center">
               <div className="text-4xl mb-4">🌍</div>
-              <h3 className="text-xl font-bold mb-3 text-gray-800">Wide Reach</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-bold font-heading mb-3 text-gray-800">Wide Reach</h3>
+              <p className="text-gray-600 font-body">
                 Expanding our network to bring Danka's flavors to communities everywhere
               </p>
             </div>
@@ -329,7 +329,7 @@ const AboutUs = () => {
                       whileHover={{ scale: 1.02 }}
                       className="bg-white rounded-lg shadow-lg p-4 sm:p-6 border-l-4 border-yellow-500"
                     >
-                      <div className="text-yellow-600 font-bold text-base sm:text-lg mb-2">
+                      <div className="text-yellow-600 font-bold font-heading text-base sm:text-lg mb-2">
                         {milestone.year}
                       </div>
                       <h3 className="text-xl sm:text-2xl font-bold font-heading mb-2 sm:mb-3 text-gray-800">
@@ -401,16 +401,11 @@ const AboutUs = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact-us"
-              className="bg-yellow-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-yellow-600 transition-colors duration-300 shadow-lg hover:shadow-xl"
+              className="bg-yellow-500 text-white px-8 py-3 rounded-full font-semibold font-body hover:bg-yellow-600 transition-colors duration-300 shadow-lg hover:shadow-xl"
             >
               Contact Us
             </a>
-            <a
-              href="/#inquiry"
-              className="bg-yellow-500 text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-yellow-600 transition-colors duration-300 shadow-lg hover:shadow-xl"
-            >
-              Franchise Inquiry
-            </a>
+          
           </div>
         </div>
       </section>

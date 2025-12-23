@@ -340,7 +340,7 @@ const OurRestaurant = () => {
                       alt={location.name}
                       className="w-full h-full object-cover"
                     />
-                    <div className="absolute top-2 right-2 bg-yellow-500 text-gray-900 px-3 py-1 rounded-full text-sm font-semibold">
+                    <div className="absolute top-2 right-2 bg-yellow-500 text-gray-900 px-3 py-1 rounded-full text-sm font-semibold font-body">
                       {location.type}
                     </div>
                   </div>
@@ -373,7 +373,7 @@ const OurRestaurant = () => {
               href="#inquiry"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-block bg-yellow-500 text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-yellow-600 transition-colors duration-300 shadow-lg hover:shadow-xl"
+              className="inline-block bg-yellow-500 text-gray-900 px-8 py-3 rounded-full font-semibold font-body hover:bg-yellow-600 transition-colors duration-300 shadow-lg hover:shadow-xl"
             >
               Become a Franchise Partner
             </motion.a>

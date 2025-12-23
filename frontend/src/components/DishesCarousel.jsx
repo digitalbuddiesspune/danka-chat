@@ -25,7 +25,7 @@ const DishesCarousel = () => {
       id: 3,
       image:
         "https://res.cloudinary.com/dtaitsw4r/image/upload/v1764667362/IMG-20251016-WA0012_loitgs.jpg",
-      name: "Street Food Special",
+      name: "Aloo Tikki Chaat",
       description: "A perfect mix of crunchy, tangy & spicy flavors topped with fresh chutneys and masalas.",
     },
     {
@@ -39,7 +39,7 @@ const DishesCarousel = () => {
       id: 5,
       image:
         "https://res.cloudinary.com/dtaitsw4r/image/upload/v1764667362/IMG-20251016-WA0014_zyqewc.jpg",
-      name: "Fresh & Crispy",
+      name: "Dahi Wada",
       description: "Soft lentil dumplings soaked in creamy yogurt, finished with sweet & spicy chutneys.",
     },
     {
@@ -60,7 +60,7 @@ const DishesCarousel = () => {
       id: 8,
       image:
         "https://res.cloudinary.com/dtaitsw4r/image/upload/v1764667361/IMG-20251016-WA0006_wyosue.jpg",
-      name: "Ragda Chaat",
+      name: "Mumbaiya Bhel",
       description: "Crunchy papdi layered with potatoes, yogurt, and sweet-tangy chutneys in every bite.",
     },
     {
