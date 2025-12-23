@@ -301,10 +301,10 @@ const DishesCarousel = () => {
                         <h3 className="text-lg md:text-xl font-bold font-heading text-white drop-shadow-sm">
                           {dish.name}
                         </h3>
-                        <p className="mt-1 text-xs md:text-sm font-body text-yellow-100/90">
+                        {/* <p className="mt-1 text-xs md:text-sm font-body text-yellow-100/90">
                           Crispy, spicy & full of flavor – a must-try from our
                           street food menu.
-                        </p>
+                        </p> */}
                       </div>
                     </div>
                   </motion.div>
