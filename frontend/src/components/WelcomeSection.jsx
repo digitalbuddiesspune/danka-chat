@@ -62,12 +62,7 @@ const WelcomeSection = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
         {/* --- HERO HEADER --- */}
         <div className="text-center mb-24">
-          <motion.div {...fadeIn} className="inline-block">
-            <span className="px-5 py-2 rounded-full bg-black text-yellow-400 text-xs font-body uppercase tracking-[0.2em] mb-6 inline-block">
-              The Ultimate Chaat Experience
-            </span>
-          </motion.div>
-
+         
           <motion.h1
             {...fadeIn}
             transition={{ delay: 0.2 }}
@@ -94,7 +89,7 @@ const WelcomeSection = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:mb-20 mb-10"
+          className=" lg:mb-20 mb-10"
         >
           {/* Main Card */}
           <motion.div
@@ -107,10 +102,10 @@ const WelcomeSection = () => {
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
-                  "Authentic Flavors",
-                  "Hygienic Kitchen",
-                  "Refined Oil Only",
-                  "RO Purified Water",
+                  "Authentic Indian flavors",
+                  "Hygienic & fresh ingredients",
+                  "All products made in refined oil",
+                  "All products made with RO purified water",
                 ].map((text) => (
                   <div key={text} className="flex items-center gap-3">
                     <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center text-green-600">
@@ -138,19 +133,8 @@ const WelcomeSection = () => {
             <div className="absolute top-[-20%] right-[-10%] w-64 h-64 bg-yellow-50 rounded-full group-hover:scale-110 transition-transform duration-700" />
           </motion.div>
 
-          {/* Experience Card */}
-          <motion.div
-            variants={itemVariants}
-            className="bg-yellow-400 p-10 rounded-[2.5rem] flex flex-col justify-center items-center text-center shadow-xl shadow-yellow-200"
-          >
-            <span className="text-4xl mb-4">💥</span>
-            <h3 className="text-xl md:text-2xl font-heading text-gray-900 mb-2">
-              DHAMAKA
-            </h3>
-            <p className="font-semibold text-sm md:text-base font-body text-yellow-900">
-              Every bite feels like 'Wah! Kya Swad Hai!'
-            </p>
-          </motion.div>
+        
+         
         </motion.div>
 
         {/* --- WHY DANKA PILLS --- */}

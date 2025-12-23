@@ -6,19 +6,14 @@ const InquiryForm = () => {
     fullName: '',
     mobileNo: '',
     email: '',
-    franchiseCart: ''
+   
   })
 
   const [errors, setErrors] = useState({})
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitSuccess, setSubmitSuccess] = useState(false)
 
-  const franchiseOptions = [
-    'Premium Chaat Center',
-    'Standard Chaat Center',
-    'Express Chaat Center',
-    'Mobile Chaat Cart'
-  ]
+ 
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -54,9 +49,7 @@ const InquiryForm = () => {
       newErrors.email = 'Please enter a valid email address'
     }
 
-    if (!formData.franchiseCart) {
-      newErrors.franchiseCart = 'Please select a franchise option'
-    }
+    
 
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
@@ -80,7 +73,7 @@ const InquiryForm = () => {
         fullName: '',
         mobileNo: '',
         email: '',
-        franchiseCart: ''
+       
       })
       
       // Reset success message after 5 seconds
@@ -191,30 +184,7 @@ const InquiryForm = () => {
             </div>
 
             {/* Franchise Cart Selection */}
-            <div>
-              <label htmlFor="franchiseCart" className="block text-sm font-semibold font-body text-gray-700 mb-2">
-                Franchise Cart Interest <span className="text-red-500">*</span>
-              </label>
-              <select
-                id="franchiseCart"
-                name="franchiseCart"
-                value={formData.franchiseCart}
-                onChange={handleChange}
-                className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 ${
-                  errors.franchiseCart ? 'border-red-500' : 'border-gray-300'
-                }`}
-              >
-                <option value="">Select a franchise option</option>
-                {franchiseOptions.map((option, index) => (
-                  <option key={index} value={option}>
-                    {option}
-                  </option>
-                ))}
-              </select>
-              {errors.franchiseCart && (
-                <p className="mt-1 text-sm text-red-500">{errors.franchiseCart}</p>
-              )}
-            </div>
+          
 
             {/* Submit Button */}
             <motion.button

@@ -17,7 +17,7 @@ const DishesCarousel = () => {
       id: 2,
       image:
         "https://res.cloudinary.com/dtaitsw4r/image/upload/v1764667362/IMG-20251016-WA0011_rzx4wy.jpg",
-      name: "Katori Chaat",
+      name: "All In One Chaat",
       description: "A perfect mix of crunchy, tangy & spicy flavors topped with fresh chutneys and masalas.",
 
     },
@@ -32,7 +32,7 @@ const DishesCarousel = () => {
       id: 4,
       image:
         "https://res.cloudinary.com/dtaitsw4r/image/upload/v1764667362/IMG-20251016-WA0013_jcj0hd.jpg",
-      name: "Masala Papdi Chaat",
+      name: "Sev Puri",
       description: "Crispy puris loaded with potatoes, chutneys, and topped with crunchy sev for extra zing.",
     },
     {
@@ -42,39 +42,33 @@ const DishesCarousel = () => {
       name: "Dahi Wada",
       description: "Soft lentil dumplings soaked in creamy yogurt, finished with sweet & spicy chutneys.",
     },
+    
     {
       id: 6,
-      image:
-        "https://res.cloudinary.com/dtaitsw4r/image/upload/v1764667361/IMG-20251016-WA0010_lwamfi.jpg",
-      name: "Sukhi Bhel",
-      description:"Light, crunchy & tangy puffed-rice chaat mixed with fresh veggies and chutneys."
-    },
-    {
-      id: 7,
       image:
         "https://res.cloudinary.com/dtaitsw4r/image/upload/v1764667361/IMG-20251016-WA0007_d5ljhp.jpg",
       name: "Samosa Chaat",
       description: "Crispy samosas crushed and topped with spicy chana, yogurt, and bold desi chutneys.",
     },
     {
-      id: 8,
+      id: 7,
       image:
         "https://res.cloudinary.com/dtaitsw4r/image/upload/v1764667361/IMG-20251016-WA0006_wyosue.jpg",
       name: "Mumbaiya Bhel",
       description: "Crunchy papdi layered with potatoes, yogurt, and sweet-tangy chutneys in every bite.",
     },
     {
-      id: 9,
+      id: 8,
       image:
         "https://res.cloudinary.com/dtaitsw4r/image/upload/v1764667361/IMG-20251016-WA0009_ttx3nb.jpg",
       name: "Paani Puri",
       description: "Dry-style chaat made with crisp puris, flavorful masalas, and perfectly balanced spices.",
     },
     {
-      id: 10,
+      id: 9,
       image:
         "https://res.cloudinary.com/dtaitsw4r/image/upload/v1764667361/IMG-20251016-WA0005_c6spj0.jpg",
-      name: "Dahi Puri",
+      name: "Tokri Chaat",
       description: "Crisp puris filled with potatoes, chilled yogurt, and rich chutneys for a creamy crunch.",
     },
   ];
@@ -267,10 +261,10 @@ const DishesCarousel = () => {
                         <h3 className="text-lg md:text-xl font-bold font-heading text-white drop-shadow-sm">
                           {dish.name}
                         </h3>
-                        <p className="mt-1 text-xs md:text-sm font-body text-yellow-100/90">
+                        {/* <p className="mt-1 text-xs md:text-sm font-body text-yellow-100/90">
                           {dish.description}
                          
-                        </p>
+                        </p> */}
                       </div>
                     </div>
                   </motion.div>
