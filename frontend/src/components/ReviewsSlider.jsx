@@ -401,7 +401,7 @@ const ReviewsSlider = () => {
                   className="group rounded-2xl transition-all duration-300 overflow-hidden cursor-pointer"
                   onClick={() => handleVideoClick(video.id)}
                 >
-                  <div className="relative w-full max-w-[280px] mx-auto aspect-[9/16] overflow-hidden bg-gray-900">
+                  <div className="relative w-full  mx-auto aspect-[9/16] overflow-hidden bg-gray-900">
                     {playingVideo === video.id ? (
                       <video
                         ref={(el) => {

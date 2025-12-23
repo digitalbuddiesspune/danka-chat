@@ -275,7 +275,7 @@ const OurRestaurant = () => {
   }
 
   return (
-    <section className="py-8 px-4 bg-white">
+    <section className="px-4  py-16 bg-white">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: -30 }}
@@ -294,7 +294,7 @@ const OurRestaurant = () => {
           </p>
         </motion.div>
 
-        <div className="relative px-8 lg:px-12 xl:px-16 overflow-visible">
+        <div className="relative lg:px-12 xl:px-16 overflow-visible">
           <style>{`
             .slick-dots li button:before {
               color: #d1d5db;
@@ -332,7 +332,7 @@ const OurRestaurant = () => {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  className="bg-white rounded-lg shadow-lg overflow-hidden"
+                  className="bg-white rounded-lg  overflow-hidden"
                 >
                   <div className="relative h-48 overflow-hidden">
                     <img
