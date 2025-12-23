@@ -124,9 +124,9 @@ const Franchise = () => {
           {/* Stats */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[
-              { number: "50+", label: "Franchise Partners" },
+              { number: "30+", label: "Franchise Partners" },
               { number: "20+", label: "Cities Across India" },
-              { number: "100K+", label: "Happy Customers" }
+              { number: "50K+", label: "Happy Customers" }
             ].map((stat, i) => (
               <div key={i} className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
                 <div className="text-3xl font-black text-yellow-300 mb-2 font-body">{stat.number}</div>

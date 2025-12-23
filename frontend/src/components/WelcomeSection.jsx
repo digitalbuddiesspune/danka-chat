@@ -105,7 +105,7 @@ const WelcomeSection = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:mb-20 mb-10"
         >
           {/* Main Card */}
           <motion.div
@@ -163,15 +163,16 @@ const WelcomeSection = () => {
             </p>
           </motion.div>
         </motion.div>
+        
 
         {/* --- WHY DANKA PILLS --- */}
-        <div className="flex flex-wrap justify-center gap-4 mb-24">
+        {/* <div className="flex flex-wrap justify-center gap-4 mb-24">
           {[
-            "100% Fresh",
-            "Street-Style",
-            "Premium Oil",
-            "Hygiene First",
-            "Fast Service",
+            "100% Fresh & Hygienic Ingredients",
+            "Authentic Street-Style Flavours",
+            "All products made in refined oil",
+            "All products made with RO purified water",
+           
           ].map((item, i) => (
             <motion.span
               key={item}
@@ -184,7 +185,7 @@ const WelcomeSection = () => {
               {item}
             </motion.span>
           ))}
-        </div>
+        </div> */}
 
         {/* --- CTA SECTION --- */}
         <motion.div

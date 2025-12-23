@@ -79,6 +79,75 @@ const DishesCarousel = () => {
     },
   ];
 
+  // Custom arrow components
+  function NextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={`${className} slick-arrow`}
+        style={{
+          ...style,
+          display: "block",
+          right: "-45px",
+          top: "50%",
+          transform: "translateY(-50%)",
+          zIndex: 10,
+        }}
+        onClick={onClick}
+      >
+        <div className="bg-yellow-500 rounded-full p-3 shadow-lg hover:bg-yellow-600 transition-all duration-300 cursor-pointer flex items-center justify-center">
+          <svg
+            className="w-5 h-5 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2.5}
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </div>
+      </div>
+    );
+  }
+
+  function PrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={`${className} slick-arrow`}
+        style={{
+          ...style,
+          display: "block",
+          left: "-45px",
+          top: "50%",
+          transform: "translateY(-50%)",
+          zIndex: 10,
+        }}
+        onClick={onClick}
+      >
+        <div className="bg-yellow-500 rounded-full p-3 shadow-lg hover:bg-yellow-600 transition-all duration-300 cursor-pointer flex items-center justify-center">
+          <svg
+            className="w-5 h-5 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2.5}
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+        </div>
+      </div>
+    );
+  }
+
   const settings = {
     dots: true,
     infinite: true,
@@ -89,6 +158,8 @@ const DishesCarousel = () => {
     autoplaySpeed: 4000,
     pauseOnHover: true,
     cssEase: "ease-out",
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     responsive: [
       {
         breakpoint: 1280,
@@ -106,6 +177,7 @@ const DishesCarousel = () => {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
+          arrows: false,
         },
       },
     ],
@@ -166,11 +238,8 @@ const DishesCarousel = () => {
         </motion.div>
 
         {/* Carousel */}
-        <div
-         
-          className="dishes-carousel"
-        >
-          <div className="hidden lg:block">
+        <div className="dishes-carousel">
+          <div className="hidden lg:block px-8 lg:px-12 xl:px-16 overflow-visible">
             <Slider {...settings}>
               {dishes.map((dish, index) => (
                 <div key={dish.id} className="px-3">
@@ -179,14 +248,13 @@ const DishesCarousel = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.4 }}
                     transition={{ duration: 0.5, delay: index * 0.05 }}
-                    whileHover={{ y: -10, scale: 1.03 }}
-                    className="group bg-white/90 backdrop-blur-sm rounded-2xl shadow-md hover:shadow-2xl border border-yellow-100 transition-all duration-300 overflow-hidden"
+                    className="group rounded-2xl border border-yellow-100 transition-all duration-300 overflow-hidden"
                   >
                     <div className="relative aspect-[4/3] overflow-hidden">
                       <img
                         src={dish.image}
                         alt={dish.name}
-                        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         loading="lazy"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-90" />
@@ -258,36 +326,30 @@ const DishesCarousel = () => {
             bottom: -35px;
           }
           .dishes-carousel .slick-dots li button:before {
-            color: #fb923c;
-            font-size: 10px;
-            opacity: 0.5;
+            color: #d1d5db;
+            font-size: 12px;
           }
           .dishes-carousel .slick-dots li.slick-active button:before {
-            color: #f97316;
-            opacity: 1;
+            color: #eab308;
           }
-          .dishes-carousel .slick-prev,
-          .dishes-carousel .slick-next {
-            z-index: 10;
+          .dishes-carousel .slick-dots li button {
+            width: 12px;
+            height: 12px;
           }
-          .dishes-carousel .slick-prev {
-            left: -24px;
+          .dishes-carousel .slick-dots li {
+            margin: 0 4px;
           }
-          .dishes-carousel .slick-next {
-            right: -24px;
+          .dishes-carousel .slick-arrow {
+            display: block !important;
+            width: 48px;
+            height: 48px;
           }
-          .dishes-carousel .slick-prev:before,
-          .dishes-carousel .slick-next:before {
-            color: #f97316;
-            font-size: 26px;
+          .dishes-carousel .slick-arrow::before {
+            display: none;
           }
-
-          @media (max-width: 768px) {
-            .dishes-carousel .slick-prev {
-              left: -12px;
-            }
-            .dishes-carousel .slick-next {
-              right: -12px;
+          @media (max-width: 1024px) {
+            .dishes-carousel .slick-arrow {
+              display: none !important;
             }
           }
         `}</style>

@@ -156,6 +156,75 @@ const ReviewsSlider = () => {
     }
   };
 
+  // Custom arrow components
+  function NextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={`${className} slick-arrow`}
+        style={{
+          ...style,
+          display: "block",
+          right: "-45px",
+          top: "50%",
+          transform: "translateY(-50%)",
+          zIndex: 10,
+        }}
+        onClick={onClick}
+      >
+        <div className="bg-yellow-500 rounded-full p-3 shadow-lg hover:bg-yellow-600 transition-all duration-300 cursor-pointer flex items-center justify-center">
+          <svg
+            className="w-5 h-5 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2.5}
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </div>
+      </div>
+    );
+  }
+
+  function PrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={`${className} slick-arrow`}
+        style={{
+          ...style,
+          display: "block",
+          left: "-45px",
+          top: "50%",
+          transform: "translateY(-50%)",
+          zIndex: 10,
+        }}
+        onClick={onClick}
+      >
+        <div className="bg-yellow-500 rounded-full p-3 shadow-lg hover:bg-yellow-600 transition-all duration-300 cursor-pointer flex items-center justify-center">
+          <svg
+            className="w-5 h-5 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2.5}
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+        </div>
+      </div>
+    );
+  }
+
   const settings = {
     dots: true,
     infinite: true,
@@ -166,6 +235,8 @@ const ReviewsSlider = () => {
     autoplaySpeed: 4000,
     pauseOnHover: true,
     cssEase: "ease-out",
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     responsive: [
       {
         breakpoint: 1280,
@@ -177,12 +248,14 @@ const ReviewsSlider = () => {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
+          arrows: false,
         },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
+          arrows: false,
         },
       },
     ],
@@ -239,7 +312,7 @@ const ReviewsSlider = () => {
         </motion.div>
 
         {/* Carousel */}
-        <div className="reviews-carousel hidden md:block">
+        <div className="reviews-carousel hidden md:block px-8 lg:px-12 xl:px-16 overflow-visible">
           <Slider {...settings}>
             {reviewVideos.map((video, index) => (
               <div key={video.id} className="px-3">
@@ -398,36 +471,30 @@ const ReviewsSlider = () => {
             bottom: -40px;
           }
           .reviews-carousel .slick-dots li button:before {
-            color: #fb923c;
-            font-size: 10px;
-            opacity: 0.5;
+            color: #d1d5db;
+            font-size: 12px;
           }
           .reviews-carousel .slick-dots li.slick-active button:before {
-            color: #f97316;
-            opacity: 1;
+            color: #eab308;
           }
-          .reviews-carousel .slick-prev,
-          .reviews-carousel .slick-next {
-            z-index: 10;
+          .reviews-carousel .slick-dots li button {
+            width: 12px;
+            height: 12px;
           }
-          .reviews-carousel .slick-prev {
-            left: -24px;
+          .reviews-carousel .slick-dots li {
+            margin: 0 4px;
           }
-          .reviews-carousel .slick-next {
-            right: -24px;
+          .reviews-carousel .slick-arrow {
+            display: block !important;
+            width: 48px;
+            height: 48px;
           }
-          .reviews-carousel .slick-prev:before,
-          .reviews-carousel .slick-next:before {
-            color: #f97316;
-            font-size: 26px;
+          .reviews-carousel .slick-arrow::before {
+            display: none;
           }
-
-          @media (max-width: 768px) {
-            .reviews-carousel .slick-prev {
-              left: -12px;
-            }
-            .reviews-carousel .slick-next {
-              right: -12px;
+          @media (max-width: 1024px) {
+            .reviews-carousel .slick-arrow {
+              display: none !important;
             }
           }
         `}</style>
