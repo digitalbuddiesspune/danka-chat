@@ -45,18 +45,14 @@ const ReviewsSlider = () => {
       url: "https://res.cloudinary.com/dtaitsw4r/video/upload/v1765607049/third_aczond.mov",
       thumbnail: generateThumbnail("https://res.cloudinary.com/dtaitsw4r/video/upload/v1765607049/third_aczond.mov"),
     },
+   
     {
       id: 5,
-      url: "https://res.cloudinary.com/dtaitsw4r/video/upload/v1765607051/fourth_t4jthe.mov",
-      thumbnail: generateThumbnail("https://res.cloudinary.com/dtaitsw4r/video/upload/v1765607051/fourth_t4jthe.mov"),
-    },
-    {
-      id: 6,
       url: "https://res.cloudinary.com/dtaitsw4r/video/upload/v1765607455/fifth_afmkvs.mov",
       thumbnail: generateThumbnail("https://res.cloudinary.com/dtaitsw4r/video/upload/v1765607455/fifth_afmkvs.mov"),
     },
     {
-      id: 7,
+      id: 6,
       url: "https://res.cloudinary.com/dtaitsw4r/video/upload/v1765607454/six_ldqa9q.mov",
       thumbnail: generateThumbnail("https://res.cloudinary.com/dtaitsw4r/video/upload/v1765607454/six_ldqa9q.mov"),
     },

@@ -10,7 +10,7 @@ const DishesCarousel = () => {
       id: 1,
       image:
         "https://res.cloudinary.com/dtaitsw4r/image/upload/v1764667363/WhatsApp_Image_2025-10-24_at_17.18.24_f1d0aa6d_dc7roj.jpg",
-      name: "Delicious Bhel",
+      name: "Matki Bhel",
       description: "Crispy, spicy & full of flavor – a must-try from our street food menu.",
     },
     {
