@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Logo from "../assets/Logo1.svg";
+import Logo from "../assets/LogoNew.png";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -38,17 +38,10 @@ const Footer = () => {
                 <img
                   src={Logo}
                   alt="Danka Logo"
-                  className="w-12 h-12 sm:w-16 sm:h-16"
+                  className="h-20 w-60"
                 />
               </div>
-              <div>
-                <h2 className="text-2xl sm:text-3xl font-bold font-heading text-yellow-400">
-                  Danka
-                </h2>
-                <p className="text-gray-400 text-sm font-body">
-                  For Panipuri & Chaat Lovers
-                </p>
-              </div>
+            
             </div>
 
             <p className="text-gray-300 mb-6 leading-relaxed font-body">

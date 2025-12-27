@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import Logo from "../assets/Logo1.svg";
+import Logo from "../assets/LogoNew.png";
 
 const Navbar = () => {
   const [hoveredItem, setHoveredItem] = useState(null);
@@ -99,7 +99,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-4 py-3 lg:px-10 transition-all duration-300 ${
-        scrolled ? "backdrop-blur-md bg-white/80 shadow-lg" : "bg-transparent"
+        scrolled ? "backdrop-blur-md bg-[#2b2b2b] shadow-lg" : "bg-transparent"
       }`}
     >
       <div>
@@ -112,7 +112,7 @@ const Navbar = () => {
           <img
             src={Logo}
             alt="Danka Logo"
-            className={`w-16 h-16 lg:w-20 lg:h-20 transition-all duration-300 ${
+            className={`h-20 transition-all duration-300 ${
               scrolled ? "" : "drop-shadow-lg"
             }`}
           />
@@ -123,7 +123,7 @@ const Navbar = () => {
       <button
         onClick={toggleMobileMenu}
         className={`md:hidden ${
-          scrolled ? "text-gray-900" : "text-white"
+          scrolled ? "text-white" : "text-white"
         } focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded p-2 transition-colors`}
         aria-label="Toggle menu"
       >
@@ -173,7 +173,7 @@ const Navbar = () => {
                 onClick={scrollToTop}
                 className={({ isActive }) =>
                   `relative ${
-                    scrolled ? "text-gray-900" : "text-white"
+                    scrolled ? "text-[#f5f5f5]" : "text-white"
                   } font-medium transition-all duration-300 hover:text-yellow-500 ${
                     isActive ? "text-yellow-500" : ""
                   }`
