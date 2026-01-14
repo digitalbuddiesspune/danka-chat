@@ -133,9 +133,43 @@ const VideoGallery = () => {
       },
     ],
   };
+  const settingsMobile = {
+    dots: true,
+    infinite: true,
+    speed: 600,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    pauseOnHover: true,
+    cssEase: 'ease-out',
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    dotsClass: 'slick-dots',
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
 
   return (
-    <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-gray-100">
+    <section className="py-8 px-2 sm:px-4 lg:px-6 bg-gradient-to-br from-gray-50 to-gray-100">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: -30 }}
@@ -148,10 +182,10 @@ const VideoGallery = () => {
           <p className="text-lg text-gray-600">Watch our collection of videos</p>
         </motion.div>
         
-        <div className="video-gallery-carousel px-8 lg:px-12 xl:px-16 overflow-visible">
-          <Slider {...settings}>
+        <div className="video-gallery-carousel lg:px-6 xl:px-8 overflow-visible">
+          <Slider {...(window.innerWidth > 768 ? settings : settingsMobile)}>
             {videos.map((video, index) => (
-              <div key={video.id} className="px-3">
+              <div key={video.id} className="px-2">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
