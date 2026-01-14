@@ -7,6 +7,7 @@ import InquiryForm from '../components/InquiryForm'
 import OurRestaurant from '../components/OurRestaurant'
 import ReviewsSlider from '../components/ReviewsSlider'
 import HeroSection from '../components/HeroSection'
+import VideoGallery from '../components/VideoGallery'
 
 const HomePage = () => {
   return (
@@ -18,6 +19,7 @@ const HomePage = () => {
       <HappinessCard />
       <OurRestaurant />
       {/* <OurOffering/> */}
+      <VideoGallery />
       <ReviewsSlider />
       <InquiryForm />
     </div>

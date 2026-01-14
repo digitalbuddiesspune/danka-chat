@@ -13,6 +13,7 @@ import PrivacyPolicy from "../pages/PrivacyPolicy";
 import CookiesPolicy from "../pages/CookiesPolicy";
 import DataProcessing from "../pages/DataProcessing";
 import Reviews from "../pages/Reviews";
+import Cart from "../pages/Cart";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -26,6 +27,7 @@ const router = createBrowserRouter(
       <Route path="/cookies" element={<CookiesPolicy />} />
       <Route path="/data-processing" element={<DataProcessing />} />
       <Route path="/reviews" element={<Reviews />} />
+      <Route path="/cart" element={<Cart />} />
     </Route>
   )
 );
