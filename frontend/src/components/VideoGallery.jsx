@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Slider from 'react-slick';
 import { motion } from 'framer-motion';
 import VideoCard from './VideoCard';
@@ -6,6 +6,8 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const VideoGallery = () => {
+  const [playingVideoId, setPlayingVideoId] = useState(null);
+  const videoRefs = useRef({});
   // YouTube Shorts URLs
   const videos = [
     {
@@ -168,6 +170,66 @@ const VideoGallery = () => {
     ],
   };
 
+  // Function to handle video play
+  const handleVideoPlay = (videoId) => {
+    // Pause all other videos by reloading their iframes
+    Object.keys(videoRefs.current).forEach((id) => {
+      if (id !== videoId.toString() && videoRefs.current[id]) {
+        const iframe = videoRefs.current[id];
+        try {
+          // Try to pause using YouTube iframe API
+          iframe.contentWindow.postMessage(
+            JSON.stringify({
+              event: 'command',
+              func: 'pauseVideo',
+              args: '',
+            }),
+            'https://www.youtube.com'
+          );
+        } catch (error) {
+          // If postMessage fails, reload iframe to stop video
+          const currentSrc = iframe.src;
+          // Reload without autoplay
+          iframe.src = currentSrc.split('&autoplay=1').join('').split('?autoplay=1').join('?');
+        }
+      }
+    });
+    setPlayingVideoId(videoId);
+  };
+
+  // Listen for YouTube iframe messages to detect when videos start playing
+  useEffect(() => {
+    const handleMessage = (event) => {
+      // YouTube iframe API messages
+      if (event.origin !== 'https://www.youtube.com') return;
+      
+      try {
+        const data = typeof event.data === 'string' ? JSON.parse(event.data) : event.data;
+        
+        // Detect when a video starts playing
+        if (data && (data.event === 'onStateChange' && data.info === 1)) {
+          // State 1 = playing
+          // Find which video this iframe belongs to
+          const iframe = event.source.frameElement || event.source;
+          Object.keys(videoRefs.current).forEach((id) => {
+            if (videoRefs.current[id] && 
+                (videoRefs.current[id].contentWindow === event.source || 
+                 videoRefs.current[id] === iframe)) {
+              handleVideoPlay(parseInt(id));
+            }
+          });
+        }
+      } catch (error) {
+        // Ignore parsing errors
+      }
+    };
+
+    window.addEventListener('message', handleMessage);
+    return () => {
+      window.removeEventListener('message', handleMessage);
+    };
+  }, []);
+
   return (
     <section className="py-8 px-2 sm:px-4 lg:px-6 bg-gradient-to-br from-gray-50 to-gray-100">
       <div className="max-w-7xl mx-auto">
@@ -195,6 +257,14 @@ const VideoGallery = () => {
                   <VideoCard
                     videoUrl={video.url}
                     title={video.title}
+                    videoId={video.id}
+                    isPlaying={playingVideoId === video.id}
+                    onPlay={() => handleVideoPlay(video.id)}
+                    videoRef={(ref) => {
+                      if (ref) {
+                        videoRefs.current[video.id] = ref;
+                      }
+                    }}
                   />
                 </motion.div>
               </div>
